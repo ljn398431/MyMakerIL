@@ -6,3 +6,7 @@ obj/
 *.userprefs
 *.sln
 *.vs
+/*.csproj
+/*.sln
+/.vs
+/Library
