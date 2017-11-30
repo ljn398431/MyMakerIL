@@ -1,0 +1,482 @@
+﻿{
+    "entries": [
+        {
+            "ident": "Values/Self: GameObject",
+            "url": "",
+            "doc": "A reference to the GameObject this Blox is currently executing on."
+        },
+        {
+            "ident": "Values/Type",
+            "url": "",
+            "doc": "This Block will find the given Type by its name. This can be used with Blocks like the `UnityEngine > GameObject > AddComponent` Block which requires a 'Type'."
+        },
+        {
+            "ident": "Values/Boolean",
+            "url": "https://msdn.microsoft.com/en-us/library/system.boolean",
+            "doc": "Represents a Boolean (true or false) value."
+        },
+        {
+            "ident": "Values/Integer",
+            "url": "https://msdn.microsoft.com/en-us/library/system.int32",
+            "doc": "Int32 (Integer) value type represents 32-bit signed integers with values that range from negative 2,147,483,648 through positive 2,147,483,647."
+        },
+        {
+            "ident": "Values/Float",
+            "url": "https://msdn.microsoft.com/en-us/library/system.single",
+            "doc": "The Single (Float) value type represents a single-precision 32-bit number with values ranging from negative 3.402823e38 to positive 3.402823e38."
+        },
+        {
+            "ident": "Values/String",
+            "url": "https://msdn.microsoft.com/en-us/library/system.string",
+            "doc": "A string is a sequential collection of Unicode characters that is used to represent text. A String object is a sequential collection of System.Char objects that represent a string. The value of the String object is the content of the sequential collection."
+        },
+        {
+            "ident": "Values/Color",
+            "url": "http://docs.unity3d.com/ScriptReference/Color.html",
+            "doc": "Representation of RGBA colors.\n\nThis structure is used throughout Unity to pass colors around. Each color component is a floating point value with a range from 0 to 1. Components (r,g,b) define a color in RGB color space. Alpha component (a) defines transparency - alpha of one is completely opaque, alpha of zero is completely transparent."
+        },
+        {
+            "ident": "Values/Component",
+            "url": "http://docs.unity3d.com/ScriptReference/Component.html",
+            "doc": "Base class for everything attached to GameObjects.\n\nNote that your code will never directly create a Component. Instead, you write script code, and attach the script to a GameObject. See Also: ScriptableObject as a way to create scripts that do not attach to any GameObject."
+        },
+        {
+            "ident": "Values/GameObject",
+            "url": "http://docs.unity3d.com/ScriptReference/GameObject.html",
+            "doc": "Base class for all entities in Unity scenes.\n\nSee Also: Component."
+        },
+        {
+            "ident": "Values/UnityObject",
+            "url": "http://docs.unity3d.com/ScriptReference/Object.html",
+            "doc": "Base class for all objects Unity can reference."
+        },
+        {
+            "ident": "Values/Rect",
+            "url": "http://docs.unity3d.com/ScriptReference/Rect.html",
+            "doc": "A 2D Rectangle defined by X and Y position, width and height.\n\nUnity uses a number of 2D coordinate spaces, most of which define X as increasing to the right, and Y increasing upwards. The one exception is in the GUI and GUILayout classes, where Y increases downwards."
+        },
+        {
+            "ident": "Values/Vector2",
+            "url": "http://docs.unity3d.com/ScriptReference/Vector2.html",
+            "doc": "Representation of 2D vectors and points. This structure is used in some places to represent 2D positions and vectors (e.g. texture coordinates in a Mesh or texture offsets in Material). In the majority of other cases a Vector3 is used."
+        },
+        {
+            "ident": "Values/Vector3",
+            "url": "http://docs.unity3d.com/ScriptReference/Vector3.html",
+            "doc": "Representation of 3D vectors and points. This structure is used throughout Unity to pass 3D positions and directions around."
+        },
+        {
+            "ident": "Values/System/Byte",
+            "url": "https://msdn.microsoft.com/en-us/library/system.byte",
+            "doc": "The Byte value type represents 8-bit unsigned integers with values that range from 0 to 255."
+        },	
+        {
+            "ident": "Values/System/SByte",
+            "url": "https://msdn.microsoft.com/en-us/library/system.sbyte",
+            "doc": "The SByte value type represents 8-bit signed integers with values ranging from negative 128 to positive 127."
+        },	
+        {
+            "ident": "Values/System/Char",
+            "url": "https://msdn.microsoft.com/en-us/library/system.char",
+            "doc": "Represents a character as a UTF-16 code unit."
+        },	
+        {
+            "ident": "Values/System/Decimal",
+            "url": "https://msdn.microsoft.com/en-us/library/system.decimal",
+            "doc": "The Decimal value type represents decimal numbers ranging from positive 79,228,162,514,264,337,593,543,950,335 to negative 79,228,162,514,264,337,593,543,950,335."
+        },	
+        {
+            "ident": "Values/System/Double",
+            "url": "https://msdn.microsoft.com/en-us/library/system.double",
+            "doc": "The Double value type represents a double-precision 64-bit number with values ranging from negative 1.79769313486232e308 to positive 1.79769313486232e308."
+        },	
+        {
+            "ident": "Values/System/UInt32",
+            "url": "https://msdn.microsoft.com/en-us/library/system.uint32",
+            "doc": "The UInt32 value type represents 32-bit unsigned integers with values ranging from 0 to 4,294,967,295."
+        },	
+        {
+            "ident": "Values/System/Int64",
+            "url": "https://msdn.microsoft.com/en-us/library/system.int64",
+            "doc": "The Int64 value type represents 64-bit integers with values ranging from negative 9,223,372,036,854,775,808 through positive 9,223,372,036,854,775,807."
+        },	
+        {
+            "ident": "Values/System/UInt64",
+            "url": "https://msdn.microsoft.com/en-us/library/system.uint64",
+            "doc": "The UInt64 value type represents 64-bit unsigned integers with values ranging from 0 to 18,446,744,073,709,551,615."
+        },	
+        {
+            "ident": "Values/System/Int16",
+            "url": "https://msdn.microsoft.com/en-us/library/system.int16",
+            "doc": "The Int16 value type represents 16-bit integers with values ranging from negative 32768 through positive 32767."
+        },	
+        {
+            "ident": "Values/System/UInt16",
+            "url": "https://msdn.microsoft.com/en-us/library/system.uint16",
+            "doc": "The UInt16 value type represents 16-bit unsigned integers with values ranging from 0 to 65535."
+        },
+
+        {
+            "ident": "Common/Debug",
+            "url": "",
+            "doc": "This will show a message in the Unity Console. Keep in mind that writing to the console (and log file) can slow down Event execution so you should only use Debug Blocks when trying to find problems and remove them when no longer needed.\n\nYou may choose a type, which will determine the colour of the message. Log = White/Black, Warning = Yellow, and Error = Red.\n\nYou may also add additional fields to the Block and then drop other Blocks into those fields. The values from those Blocks will be shown in the console together with the message you have entered."
+        },
+        {
+            "ident": "Common/Comment",
+            "url": "",
+            "doc": "This Block has no other purpose than providing a way to insert message for yourself into the Event graph. This can be useful to remind what you are trying to achieve with the logic applied in Blocks to follow."
+        },
+        {
+            "ident": "Common/Variable",
+            "url": "",
+            "doc": "The variable Block is used to either set a variable value or get a value from a variable.\n\nIt can be used to access a Variable of the current Blox, or an Object's variable via the ObjectVariable component on a target GameObject, or a Global variable, which is on the BloxGlobal GameObject.\n\nNote that Event Variables can be created on the spot if they do not exist in the Event. This normally apply to when the Variable Block is used as a setter or if the Variable is used in another Block which requires a reference to the Variable rather than the variable's value (for example the Loop Block)"
+        },
+
+        {
+            "ident": "Common/Array/Add",
+            "url": "",
+            "doc": "Add a value to the Array."
+        },
+        {
+            "ident": "Common/Array/Clear",
+            "url": "",
+            "doc": "Clear the Array of all entries/ values."
+        },
+        {
+            "ident": "Common/Array/Clone",
+            "url": "",
+            "doc": "Returns a copy of the Array."
+        },
+        {
+            "ident": "Common/Array/Contains",
+            "url": "",
+            "doc": "Returns True if the Array contains the given value, else False."
+        },
+        {
+            "ident": "Common/Array/Count",
+            "url": "",
+            "doc": "Returns the number of entries/ values the Array contains."
+        },
+        {
+            "ident": "Common/Array/Get Value",
+            "url": "",
+            "doc": "Return the value at specified index in Array. The index must be a value between 0 [inclusive] and the Count (size) of the Array [exclusive]. Arrays start indexing form 0, not 1."
+        },
+        {
+            "ident": "Common/Array/Index of",
+            "url": "",
+            "doc": "Return the index of the specified value. -1 if value not found in the Array."
+        },
+        {
+            "ident": "Common/Array/Index of",
+            "url": "",
+            "doc": "Return the index of the specified value. Return -1 if value not found in the Array."
+        },
+        {
+            "ident": "Common/Array/Insert",
+            "url": "",
+            "doc": "Inserts value into the Array at specified index. The index can be a value between 0 [inclusive] and the Count (size) of the Array [inclusive]. An index=0 will insert it in front of the Array while Array-Count/Max is the same as using Add and will insert it at the end. Arrays start indexing form 0, not 1."
+        },
+        {
+            "ident": "Common/Array/Remove",
+            "url": "",
+            "doc": "Removes first occurrence of the specified value in the Array."
+        },
+        {
+            "ident": "Common/Array/Remove at",
+            "url": "",
+            "doc": "Removes value at specified index. The index must be a value between 0 [inclusive] and the Count (size) of the Array [exclusive]. Arrays start indexing form 0, not 1."
+        },
+        {
+            "ident": "Common/Array/Reverse",
+            "url": "",
+            "doc": "Reverses the entries of the Array. If you use this as an Action it will reverse the Array given in the Context. If you use it as a Value a copy of the Array, reversed, will be returned without changing the original Array (given in context)."
+        },
+        {
+            "ident": "Common/Array/Set Value",
+            "url": "",
+            "doc": "Changes the value at the given index in the Array. The index must be a value between 0 [inclusive] and the Count (size) of the Array [exclusive]. Arrays start indexing form 0, not 1."
+        },
+        {
+            "ident": "Common/Array/Sort",
+            "url": "",
+            "doc": "Sorts the entries of the Array. If you use this as an Action it will sort the Array given in the Context. If you use it as a Value a copy of the Array, sorted, will be returned without changing the original Array (given in context)."
+        },
+        {
+            "ident": "Common/Array/to List",
+            "url": "",
+            "doc": "Returns a List of values copied from the Array."
+        },
+
+        {
+            "ident": "Common/List/Add",
+            "url": "",
+            "doc": "Add a value to the list."
+        },
+        {
+            "ident": "Common/List/Clear",
+            "url": "",
+            "doc": "Clear the list of all entries/ values."
+        },
+        {
+            "ident": "Common/List/Clone",
+            "url": "",
+            "doc": "Returns a copy of the List."
+        },
+        {
+            "ident": "Common/List/Contains",
+            "url": "",
+            "doc": "Returns True if the List contains the given value, else False."
+        },
+        {
+            "ident": "Common/List/Count",
+            "url": "",
+            "doc": "Returns the number of entries/ values the List contains."
+        },
+        {
+            "ident": "Common/List/Get Value",
+            "url": "",
+            "doc": "Return the value at specified index in List. The index must be a value between 0 [inclusive] and the Count (size) of the List [exclusive]. Lists start indexing form 0, not 1."
+        },
+        {
+            "ident": "Common/List/Index of",
+            "url": "",
+            "doc": "Return the index of the specified value. -1 if value not found in the list."
+        },
+        {
+            "ident": "Common/List/Index of",
+            "url": "",
+            "doc": "Return the index of the specified value. Return -1 if value not found in the list."
+        },
+        {
+            "ident": "Common/List/Insert",
+            "url": "",
+            "doc": "Inserts value into the list at specified index. The index can be a value between 0 [inclusive] and the Count (size) of the List [inclusive]. An index=0 will insert it in front of the list while List-Count/Max is the same as using Add and will insert it at the end. Lists start indexing form 0, not 1."
+        },
+        {
+            "ident": "Common/List/Remove",
+            "url": "",
+            "doc": "Removes first occurrence of the specified value in the list."
+        },
+        {
+            "ident": "Common/List/Remove at",
+            "url": "",
+            "doc": "Removes value at specified index. The index must be a value between 0 [inclusive] and the Count (size) of the List [exclusive]. Lists start indexing form 0, not 1."
+        },
+        {
+            "ident": "Common/List/Reverse",
+            "url": "",
+            "doc": "Reverses the entries of the list. If you use this as an Action it will reverse the List given in the Context. If you use it as a Value a copy of the list, reversed, will be returned without changing the original list (given in context)."
+        },
+        {
+            "ident": "Common/List/Set Value",
+            "url": "",
+            "doc": "Changes the value at the given index in the list. The index must be a value between 0 [inclusive] and the Count (size) of the List [exclusive]. Lists start indexing form 0, not 1."
+        },
+        {
+            "ident": "Common/List/Sort",
+            "url": "",
+            "doc": "Sorts the entries of the list. If you use this as an Action it will sort the List given in the Context. If you use it as a Value a copy of the list, sorted, will be returned without changing the original list (given in context)."
+        },
+        {
+            "ident": "Common/List/to Array",
+            "url": "",
+            "doc": "Returns an Array of values copied from the List."
+        },
+
+        {
+            "ident": "Flow/Trigger Event",
+            "url": "",
+            "doc": "Triggers the named Event in all Blox of the target GameObject. Optionally the event can be triggered after a certain timeout (in seconds).\n\nUse the [+] button to add more fields to the Trigger Block. This will allow you to pass values on to the triggered event. These values will be available as Event Variables in the event with names param0, param1, etc."
+        },
+        {
+            "ident": "Flow/IF",
+            "url": "",
+            "doc": "The IF Block will only execute its child Blocks if the result of the <b>condition</b> result is True."
+        },
+        {
+            "ident": "Flow/ElseIF",
+            "url": "",
+            "doc": "This Block must be attached to the bottom of an [IF] or another [ElseIF] Block.\n\nThe ElseIF Block will only execute its child Blocks if the result of the <b>condition</b> test is True or if no condition was specified; <b>AND only if</b> the Block it follows on (the previous Block) had a False result."
+        },
+        {
+            "ident": "Flow/Loop",
+            "url": "",
+            "doc": "The Loop Block is a <b>loop</b> type block used to execute the child Blocks a certain number of times.\n\nEx. If you want the loop to call the child Blocks 10 times then <b>from</b> can be set to 0 and <b>while less</b> can be set to 10; because as soon as the counter reaches 10 it will exit the loop and not execute any child blocks. So if <b>from</b> was set to 1 then <b>while less</b> would have to be set to 11 to have the loop perform 10 times. This is convenient since you might want to use a Loop Block to iterate over the entries of a list or array and these start their indexing at 0, meaning you need the loop to run up to one less than the Count returned by the list.\n\nThe <b>with</b> field takes an optional Variable Block. This variable can be either an Event, Blox, Object, or Global Variable type. You only need to specify this Variable if you would like to use the count value inside the Loop, for example when you need an index value into an array/ list that the loop is iterating over.",
+			"parameters": [
+				{
+					"name": "with",
+					"type": "Variable",
+					"doc": "An optional Variable that will be used as counter."
+				},
+				{
+					"name": "from",
+					"type": "Integer",
+					"doc": "The value the loop will start counting from."
+				},
+				{
+					"name": "while less",
+					"type": "Integer",
+					"doc": "The loop will continue until this value is reached and then terminate immediately. This value must be higher than the start value since the loop can't count down."
+				}
+			]
+        },
+        {
+            "ident": "Flow/While",
+            "url": "",
+            "doc": "The While Block is a <b>loop</b> type block used to execute the child Blocks contentiously while certain conditions are met - as long as the condition test is True.\n\nThe Break Block can be used to force this loop to stop.",
+			"parameters": [
+				{
+					"name": "condition",
+					"type": "Boolean",
+					"doc": "The loop will continue until this test's result becomes False."
+				}
+			]
+        },
+        {
+            "ident": "Flow/Do After Timeout",
+            "url": "",
+            "doc": "This Block must be used in an Event which will be called continuously or at least once per frame like the Update, LateUpdate or FixedUpdate.\n\nThis Block makes use of a Variable to keep track of a count-down. The Blox Variable would be the best type to use here but an Object or Global variable will work too. Do not use an Event Variable since they become invalid as soon as the event is done and this variable's value must persists over several calls to the same event.\n\nAs long as the Variable is not defined or its value is '0.0' or less (it makes use of a Float Value) this Block will not do anything. This is so that you have time to initialise the initial value of the Variable before this Block will start the count-down.\n\nThe Block will perform the count-down (subtracting Time.deltaTime from the variable's value each time it is called) but only as as long as the value is higher than '0.0'. Once it reaches '0.0' or less it will execute the child Blocks and then stop doing anything until the Variable is reset to a value higher than '0.0' again.\n\nThe countdown is in second, so setting the value of the variable to 2.0 will result in a 2 second count-down before the child Blocks will be run.",
+			"parameters": [
+				{
+					"name": "with",
+					"type": "Variable",
+					"doc": "A Variable to use as Counter. This must be a 'Float' type variable and should be either a Blox, Object, or Global variable. An Event variable will not work well since it might be destroyed/ reset when the Event exists."
+				}
+			]
+        },
+        {
+            "ident": "Flow/Break",
+            "url": "",
+            "doc": "Normally used to terminate a <b>loop</b> type block, like the [Loop] or [While] Blocks. When used in a loop the loop will break immediately and execution will continue with the Block following on the loop Block. If you use a loop within a loop the loop contain the Break will 'consume' the break so that it does not fall through to the loop containing it.\n\nUsing the Break outside of a loop will cause the Event to stop execution at that point.\n\nYou can use the Break block in non-loop Blocks like the [IF] or [ElseIF] to check if a certain condition is met before the break is called to break out of the loop or stop the event."
+        },
+        {
+            "ident": "Flow/Goto First",
+            "url": "", 
+            "doc": "Normally used when you want to skip some blocks in a loop type block.\n\nThis Block will cause execution to continue from the First Block of the Event or Loop. If used in a loop-type block like the [Loop] or [While] Blocks it will cause execution to continue from the first child block of that loop, rather than the Event itself.\n\nUsing it in any other container type Block like the [IF] or [ElseIF] will not change the rules about using it at Event or Loop level so an [IF] could be used to check if a certain condition is met before this block will cause execution to continue from the start of the Event or Loop block.\n\nNote that in a [Loop] Block the loop will still be able to update its counter and the [While] loop will do its condition check before executing the first block."
+        },
+        {
+            "ident": "Flow/Stop",
+            "url": "",
+            "doc": "This Block will cause execution of the Event to stop immediately, no matter whether it is used inside a loop type block or not.\n\nIf you only want to stop a loop but have the rest of the event's blocks execute below the loop then rather use the Break Block."
+        },
+        {
+            "ident": "Flow/Wait for Seconds",
+            "url": "",
+            "doc": "Will pause execution of the Event at the Block and wait for the specified number of seconds and then continue to execute the Blocks that follows.\n\nThis Blocks can only be used in certain Events like the Start and Custom events. You will be unable to drop it into an unsupported Event."
+        },
+        {
+            "ident": "Flow/Wait for EndOfFrame",
+            "url": "",
+            "doc": "Will pause execution of the Event and wait until the end of the frame after all cameras and GUI is rendered, just before displaying the frame on screen, and then continue to execute the Blocks that follows.\n\nThis Blocks can only be used in certain Events like the Start and Custom events. You will be unable to drop it into an unsupported Event."
+        },
+        {
+            "ident": "Flow/Wait for FixedUpdate",
+            "url": "",
+            "doc": "Will pause execution of the Event and wait until the next FixedUpdate Event would be triggered and then continue to execute the Blocks that follows.\n\nThis Blocks can only be used in certain Events like the Start and Custom events. You will be unable to drop it into an unsupported Event."
+        },
+        {
+            "ident": "Flow/Wait for Operation",
+            "url": "",
+            "doc": "Will pause execution of the Event and wait for the specified operation to complete and then continue to execute the Blocks that follows.\n\nThis Blocks can only be used in certain Events like the Start and Custom events. You will be unable to drop it into an unsupported Event."
+        },
+
+        {
+            "ident": "Comparison/a AND b",
+            "url": "",
+            "doc": "Returns True if both A and B is True, else False if either is False."
+        },
+        {
+            "ident": "Comparison/a OR b",
+            "url": "",
+            "doc": "Returns True if either A or B is True, else False if both are False."
+        },
+        {
+            "ident": "Comparison/Not a",
+            "url": "",
+            "doc": "Returns True if A is False, else False if A is True."
+        },
+        {
+            "ident": "Comparison/a == b",
+            "url": "",
+            "doc": "Returns True if A is equal to B, else False."
+        },
+        {
+            "ident": "Comparison/a != b",
+            "url": "",
+            "doc": "Returns True if A is not equal to B, else False."
+        },
+        {
+            "ident": "Comparison/a < b",
+            "url": "",
+            "doc": "Returns True if A is smaller than B, else False."
+        },
+        {
+            "ident": "Comparison/a <= b",
+            "url": "",
+            "doc": "Returns True if A is smaller than or equal to B, else False."
+        },
+        {
+            "ident": "Comparison/a > b",
+            "url": "",
+            "doc": "Returns True if A is greater than B, else False."
+        },
+        {
+            "ident": "Comparison/a >= b",
+            "url": "",
+            "doc": "Returns True if A is greater than or equal to B, else False."
+        },
+														
+        {
+            "ident": "Maths/a + b [addition]",
+            "url": "",
+            "doc": "Add A and B together and return the result. The type of the result will depend on the type of the values passed.\n\nThe Block will attempt to convert B to the same type as A if unable to at first perform the operation with types as they are. It fails with an error message if the operation could not be completed even after conversion."
+        },
+        {
+            "ident": "Maths/a - b [subtraction]",
+            "url": "",
+            "doc": "Subtract B from A and return the result. The type of the result will depend on the type of the values passed.\n\nThe Block will attempt to convert B to the same type as A if unable to at first perform the operation with types as they are. It fails with an error message if the operation could not be completed even after conversion."
+        },
+        {
+            "ident": "Maths/a ÷ b [division]",
+            "url": "",
+            "doc": "Divide A by B and return the result. The type of the result will depend on the type of the values passed.\n\nThe Block will attempt to convert B to the same type as A if unable to at first perform the operation with types as they are. It fails with an error message if the operation could not be completed even after conversion."
+        },
+        {
+            "ident": "Maths/a MOD b [modulus]",
+            "url": "",
+            "doc": "Divide A by B and return the <b>remainder</b> of the result. The type of the result will depend on the type of the values passed.\n\nThe Block will attempt to convert B to the same type as A if unable to at first perform the operation with types as they are. It fails with an error message if the operation could not be completed even after conversion."
+        },
+        {
+            "ident": "Maths/a × b [multiplication]",
+            "url": "",
+            "doc": "Multiply A with B and return the result. The type of the result will depend on the type of the values passed.\n\nThe Block will attempt to convert B to the same type as A if unable to at first perform the operation with types as they are. It fails with an error message if the operation could not be completed even after conversion."
+        },
+        {
+            "ident": "Maths/Bitwise/a & b [and]",
+            "url": "",
+            "doc": "The bitwise AND operator (&) compares each bit of the first operand to the corresponding bit of the second operand. If both bits are 1, the corresponding result bit is set to 1. Otherwise, the corresponding result bit is set to 0.\n\nBoth operands to the bitwise AND operator must be of integral types (like Integer, Int16, UInt32, Byte, and other whole numbers)."
+        },
+        {
+            "ident": "Maths/Bitwise/a | b [or]",
+            "url": "",
+            "doc": "The bitwise inclusive OR operator (|) compares each bit of its first operand to the corresponding bit of its second operand. If either bit is 1, the corresponding result bit is set to 1. Otherwise, the corresponding result bit is set to 0.\n\nBoth operands to the bitwise AND operator must be of integral types (like Integer, Int16, UInt32, Byte, and other whole numbers)."
+        },
+        {
+            "ident": "Maths/Bitwise/a ^ b [xor]",
+            "url": "",
+            "doc": "The bitwise exclusive OR operator (^) compares each bit of its first operand to the corresponding bit of its second operand. If one bit is 0 and the other bit is 1, the corresponding result bit is set to 1. Otherwise, the corresponding result bit is set to 0.\n\nBoth operands to the bitwise AND operator must be of integral types (like Integer, Int16, UInt32, Byte, and other whole numbers)."
+        },
+        {
+            "ident": "Maths/Bitwise/a << b [left-shift]",
+            "url": "",
+            "doc": "The left-shift operator (<<) shifts its first operand left by the number of bits specified by its second operand. The type of the second operand must be an Integer (Int32) or a type that has a predefined implicit numeric conversion to Integer.\n\nIf the first operand is an Int32 (Integer) or UInt32 (32-bit quantity), the shift count is given by the low-order five bits of the second operand. That is, the actual shift count is 0 to 31 bits.\n\nIf the first operand is a Int64 or UInt64 (64-bit quantity), the shift count is given by the low-order six bits of the second operand. That is, the actual shift count is 0 to 63 bits.\n\nAny high-order bits that are not within the range of the type of the first operand after the shift are discarded, and the low-order empty bits are zero-filled. Shift operations never cause overflows."
+        },
+        {
+            "ident": "Maths/Bitwise/a >> b [right-shift]",
+            "url": "",
+            "doc": "The right-shift operator (>>) shifts its first operand right by the number of bits specified by its second operand.\n\nIf the first operand is an Int32 (Integer) or UInt32 (32-bit quantity), the shift count is given by the low-order five bits of the second operand (second operand & 0x1f).\n\nIf the first operand is a Int64 or UInt64 (64-bit quantity), the shift count is given by the low-order six bits of the second operand (second operand & 0x3f).\n\nIf the first operand is an Int32 (Integer) or Int64, the right-shift is an arithmetic shift (high-order empty bits are set to the sign bit). If the first operand is of type UInt32 or UInt64, the right-shift is a logical shift (high-order bits are zero-filled)."
+        }
+
+	]
+}

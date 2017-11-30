@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DFEE9747-D091-9D2F-B3FB-02ED5632B439}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Assembly-CSharp.dll</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
+    <UnityVersion>5.6.1f1</UnityVersion>
+    <RootNamespace></RootNamespace>
+    <LangVersion>4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_1;UNITY_5_6;UNITY_5;UNITY_ANALYTICS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_PRO_LICENSE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_1;UNITY_5_6;UNITY_5;UNITY_ANALYTICS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_PRO_LICENSE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="Boo.Lang" />
+    <Reference Include="UnityScript.Lang" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>D:/Program Files/Unity5.6.1f1/Editor/Data/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>D:/Program Files/Unity5.6.1f1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>D:/Program Files/Unity5.6.1f1/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TestRunner">
+      <HintPath>D:/Program Files/Unity5.6.1f1/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>D:/Program Files/Unity5.6.1f1/Editor/Data/UnityExtensions/Unity/TestRunner/nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>D:/Program Files/Unity5.6.1f1/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HoloLens">
+      <HintPath>D:/Program Files/Unity5.6.1f1/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VR">
+      <HintPath>D:/Program Files/Unity5.6.1f1/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="plyLib">
+      <HintPath>Assets/plyoung/assembly/runtime/plyLib.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>D:/Program Files/Unity5.6.1f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Databinding\ComparisonDataProvider.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Databinding\ConstantValueProvider.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Databinding\CurveDataMapProvider.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Databinding\DataBinding.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Databinding\DataBindingValueSource.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Databinding\DataProvider.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Databinding\DataProviderUpdater.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Databinding\GraphMappedValuesProvider.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Databinding\MathsDataProvider.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Databinding\MemberBindProvider.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Databinding\Property.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Databinding\PropertyChangedEventAttribute.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Databinding\TriggerEventDataProvider.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Variables\BloxVariables.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Variables\GlobalVariables.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Variables\IplyVariablesOwner.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Variables\ObjectVariables.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Variables\plyVar.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Variables\plyVarDataProvider.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Variables\plyVarValueHandler.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Variables\plyVar_AnimationCurve.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Variables\plyVar_Array.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Variables\plyVar_Bool.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Variables\plyVar_Color.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Variables\plyVar_Color32.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Variables\plyVar_Component.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Variables\plyVar_Float.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Variables\plyVar_GameObject.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Variables\plyVar_Gradient.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Variables\plyVar_Int.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Variables\plyVar_List.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Variables\plyVar_Prefab.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Variables\plyVar_Quaternion.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Variables\plyVar_Rect.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Variables\plyVar_String.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Variables\plyVar_SystemObject.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Variables\plyVar_UnityObject.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Variables\plyVar_Vector2.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Variables\plyVar_Vector3.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Variables\plyVar_Vector4.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Variables\plyVariables.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine.Variables\plyVariablesBehaviour.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\ADD_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\AND_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Animator_BloxEventHandler.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Application_BloxEventHandler.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Array_Add_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Array_Clear_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Array_Clone_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Array_Contains_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Array_Count_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Array_Get_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Array_IndexOf_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Array_Insert_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Array_RemoveAt_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Array_Remove_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Array_Reverse_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Array_Set_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Array_Sort_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Array_ToList_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Audio_BloxEventHandler.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\AutoUnloadOption.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\B_AND_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\B_LS_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\B_OR_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\B_RS_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\B_XOR_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Blox.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\BloxBlock.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\BloxBlockAttribute.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\BloxBlockData.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\BloxBlockIconAttribute.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\BloxBlockType.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\BloxContainer.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\BloxEvent.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\BloxEventArg.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\BloxEventAttribute.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\BloxEventData.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\BloxEventHandler.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\BloxEventHandlerRegistar.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\BloxFlowSignal.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\BloxGlobal.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\BloxMathsUtil.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\BloxMemberInfo.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\BloxSerializer.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\BloxStringSerializer.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\BloxUtil.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Break_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\CharController_BloxEventHandler.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Collision2D_BloxEventHandler.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Collision2D_nfo_BloxEventHandler.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Collision3D_BloxEventHandler.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Collision3D_nfo_BloxEventHandler.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Comment_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Common_BloxEventHandler.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\ComparisonOperation.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Custom_BloxEventHandler.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\DIV_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Debug_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\DoAfterTimeout_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\EQ_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\ElseIF_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\ExcludeFromBloxAttribute.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\GTE_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\GT_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\GotoFirst_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\IF_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\IncludeInBloxAttribute.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Joint_BloxEventHandler.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\LTE_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\LT_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\List_Add_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\List_Clear_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\List_Clone_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\List_Contains_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\List_Count_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\List_Get_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\List_IndexOf_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\List_Insert_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\List_RemoveAt_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\List_Remove_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\List_Reverse_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\List_Set_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\List_Sort_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\List_ToArray_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Loop_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\MOD_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\MUL_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\MathsOperation.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Mouse_BloxEventHandler.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\NEQ_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\NOT_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\OR_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\OnGUI_BloxEventHandler.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Particle_BloxEventHandler.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Renderer_BloxEventHandler.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\RoundingOption.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\SUB_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\SelfGameObject_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Stop_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\SuppressBaseMembersInBloxAttribute.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Transform_BloxEventHandler.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Trigger2D_BloxEventHandler.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Trigger2D_nfo_BloxEventHandler.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Trigger3D_BloxEventHandler.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Trigger3D_nfo_BloxEventHandler.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\TriggerBloxEventOnClick.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\TriggerEvent_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Type_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\UpdateFixed_BloxEventHandler.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\UpdateLate_BloxEventHandler.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Update_BloxEventHandler.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\Variable_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\WaitForEndOfFrame_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\WaitForFixedUpdate_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\WaitForSeconds_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\While_Block.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxEngine\plyVariablesType.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\AreaTrigger.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\AreaTrigger_BloxEventHandler.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\AttributeDataProvider.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\BGSSettings.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\BloxEventHandlerRegistar.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\Bootstrap.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\Bootstrap_BloxEventHandler.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\CharacterAttribute.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\CharacterAttributeAttribute.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\CharacterAttributeDef.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\CharacterAttributeDefLinkAttribute.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\CharacterAttributeDefsAsset.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\CharacterAttributeDefsGroup.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\DisableOnAwake.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\DontDestroyOnLoad.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\GameGlobal.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\GroupedData.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\GroupedDataGroup.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\GroupedDataItem.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\ICharacterAttributesOwner.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\ImageManager.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\ManagedImage.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\ManagedImagesAsset.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\ManagedImagesGroup.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\ManagedProperty.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\ManagedPropertyRefProvider.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\PropertiesManager.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\SettingsManager.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\SimpleFollower.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\Skill.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\SkillDef.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\SkillDefsAsset.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\SkillDefsGroup.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\SkillLogic.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\SkillLogic_Basic.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\SkillLogic_BasicProjectile.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\SkillLogic_ChainProjectile.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\SkillLogic_Test2.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\SoundVolumeType.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\SoundVolumeUpdater.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\SplashScreensManager.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\SplashScreensManager_BloxEventHandler.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\UIActiveStateUpdater.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\UIButtonAction.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\UIColorUpdater.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\UICommon.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\UIDropdownUpdater.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\UIElementUpdater.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\UIImageUpdater.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\UIInputFieldUpdater.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\UIRawImageUpdater.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\UISliderUpdater.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\UITextUpdater.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\UIToggleUpdater.cs" />
+    <Compile Include="Assets\plyoung\assembly\runtime\BloxGameSystems\WindowManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\plyoung\Blox\editor\res\blocks.txt" />
+    <None Include="Assets\plyoung\Blox\editor\res\default_blocks.txt" />
+    <None Include="Assets\plyoung\Blox\editor\res\events.txt" />
+    <None Include="Assets\plyoung\Blox\editor\themes\NewTheme\text_colour.txt" />
+    <None Include="Assets\plyoung\assembly\editor\HtmlAgilityPack_license.txt" />
+    <None Include="Assets\plyoung\assembly\editor\ICSharpCode.SharpZipLib_license.txt" />
+    <None Include="Assets\plyoung\assembly\editor\res\blocks.txt" />
+    <None Include="Assets\plyoung\assembly\editor\res\default_blocks.txt" />
+    <None Include="Assets\plyoung\assembly\editor\res\events.txt" />
+    <None Include="Assets\plyoung\assembly\runtime\BloxEngine.XML" />
+    <None Include="Assets\plyoung\version-Blox.txt" />
+    <None Include="Assets\plyoung\version-plyLib.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
+</Project>

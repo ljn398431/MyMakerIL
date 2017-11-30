@@ -1,0 +1,31 @@
+﻿# This is a list of what will be selected when the "Select Defaults" button is used in the Blox Namespace Scanner.
+# All top-level Values Blocks and custom defined Blocks will always be included.
+#
+# Make a copy of this file under 'Assets\projectData\Blox\default_blocks.txt' if you want to
+# make changes since changes made to the original file will be lost when Blox is updated.
+
+UnityEngine/Animator
+UnityEngine/AudioSource
+UnityEngine/Behaviour
+UnityEngine/Color
+UnityEngine/GameObject
+UnityEngine/Input
+UnityEngine/Mathf
+UnityEngine/Object
+UnityEngine/Physics
+UnityEngine/Physics2D
+UnityEngine/Random
+UnityEngine/Ray
+UnityEngine/Ray2D
+UnityEngine/RaycastHit
+UnityEngine/RaycastHit2D
+UnityEngine/Rect
+UnityEngine/RectTransform
+UnityEngine/Rigidbody
+UnityEngine/Rigidbody2D
+UnityEngine/SceneManagement/SceneManager
+UnityEngine/Time
+UnityEngine/Transform
+UnityEngine/Vector2
+UnityEngine/Vector3
+System/String

@@ -1,0 +1,473 @@
+﻿{
+    "entries": [
+        {
+            "ident": "Custom",
+            "name": "Custom",
+            "url": "",
+            "doc": "A Custom Event is not bound to any system Events and is normally used where you want to trigger the Event yourself when the time is right.\n\nYou can use the Block: `Flow > Trigger Event` to trigger this Event by its name.\n\nIf you choose to send values to the Event, when using Trigger Event, those values will be available via Temp Variables named param1, param2, param3, up to the number of values you send and in the same order you send them.",
+            "parameters": []
+        },
+        {
+            "ident": "Common/Awake",
+            "name": "Awake",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.Awake.html",
+            "doc": "Awake is called after the Blox instance was created.\n\nAwake is used to initialize any variables or game state before the game starts. Awake is called only once during the lifetime of the Blox instance on a specific GameObject. Awake is called after all objects are initialized so you can safely speak to other objects or query them using eg. GameObject.FindWithTag. Each GameObject's Awake is called in a random order between objects. Because of this, you should use Awake to set up references between scripts, and use Start to pass any information back and forth. Awake is always called before any Start events. This allows you to order initialization of scripts. Awake can not act as a coroutine (no wait blocks can be used in it).",
+            "parameters": []
+        },
+        {
+            "ident": "Common/Start",
+            "name": "Start",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.Start.html",
+            "doc": "Start is called on the frame when a Blox is enabled just before any of the Update Events are called the first time.\n\nLike the Awake Event, Start is called exactly once in the lifetime of the Blox instance. However, Awake is called when the Blox object is initialised, regardless of whether or not the Blox is enabled. Start may not be called on the same frame as Awake if the Blox is not enabled at initialisation time. The Awake Event is called on all objects in the scene before any object's Start Event is called. This fact is useful in cases where object A's initialisation code needs to rely on object B's already being initialised; B's initialisation should be done in Awake while A's should be done in Start. Where objects are instantiated during gameplay, their Awake Events will naturally be called after the Start Events of scene objects have already completed.",
+            "parameters": []
+        },
+        {
+            "ident": "Common/FixedUpdate",
+            "name": "FixedUpdate",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.FixedUpdate.html",
+            "doc": "This Event is called every fixed frame-rate frame, if the Blox is enabled.\n\nFixedUpdate should be used instead of Update when dealing with Rigidbody. For example when adding a force to a rigidbody, you have to apply the force every fixed frame inside FixedUpdate instead of every frame inside Update.",
+            "parameters": []
+        },
+        {
+            "ident": "Common/LateUpdate",
+            "name": "LateUpdate",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.LateUpdate.html",
+            "doc": "LateUpdate is called every frame, if the Blox is enabled.\n\nLateUpdate is called after all Update Events have been called. This is useful to order execution. For example a follow camera should always be implemented in LateUpdate because it tracks objects that might have moved inside Update.",
+            "parameters": []
+        },
+        {
+            "ident": "Common/Update",
+            "name": "Update",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.Update.html",
+            "doc": "Update is called every frame, if the Blox is enabled.\n\nUpdate is the most commonly used event to implement any kind of game behaviour.",
+            "parameters": []
+        },
+        {
+            "ident": "Common/OnDestroy",
+            "name": "OnDestroy",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnDestroy.html",
+            "doc": "This event is called when the Blox will be destroyed.\n\nOnDestroy will only be called on game objects that have previously been active.",
+            "parameters": []
+        },
+        {
+            "ident": "Common/OnDisable",
+            "name": "OnDisable",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnDisable.html",
+            "doc": "This event is called when the Blox becomes disabled or inactive.\n\nThis is also called when the object is destroyed and can be used for any cleanup. When Blox are reloaded after compilation has finished, OnDisable will be called, followed by an OnEnable after the Blox has been loaded.",
+            "parameters": []
+        },
+        {
+            "ident": "Common/OnEnable",
+            "name": "OnEnable",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnEnable.html",
+            "doc": "This event is called when the object becomes enabled and active.\n\n",
+            "parameters": []
+        },
+        {
+            "ident": "Collision/OnCollisionEnter",
+            "name": "OnCollisionEnter",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnCollisionEnter.html",
+            "doc": "OnCollisionEnter is called when this collider/rigidbody has begun touching another rigidbody/collider.\n\nUse the 'with Info' variant of this Event if you need collision information like contact points, impact velocity, etc. This event avoids unnecessary calculations since it does not provide the collision information.\n\nNotes: Collision events are only sent if one of the colliders also has a non-kinematic rigidbody attached. Collision events will be sent to disabled MonoBehaviours, to allow enabling Behaviours in response to collisions.",
+            "parameters": []
+        },
+        {
+            "ident": "Collision/OnCollisionEnter2D",
+            "name": "OnCollisionEnter2D",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnCollisionEnter2D.html",
+            "doc": "Sent when an incoming collider makes contact with this object's collider (2D physics only).\n\nUse the 'with Info' variant of this Event if you need Collision information like contact points, impact velocity, etc. This event avoids unnecessary calculations since it does not provide the collision information.\n\nNotes: Collision events are only sent if one of the colliders also has a non-kinematic rigidbody attached. Collision events will be sent to disabled MonoBehaviours, to allow enabling Behaviours in response to collisions.",
+            "parameters": []
+        },
+        {
+            "ident": "Collision/OnCollisionExit",
+            "name": "OnCollisionExit",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnCollisionExit.html",
+            "doc": "OnCollisionExit is called when this collider/rigidbody has stopped touching another rigidbody/collider.\n\nUse the 'with Info' variant of this Event if you need Collision information like contact points, impact velocity, etc. This event avoids unnecessary calculations since it does not provide the collision information.\n\nNotes: Collision events are only sent if one of the colliders also has a non-kinematic rigidbody attached. Collision events will be sent to disabled MonoBehaviours, to allow enabling Behaviours in response to collisions.",
+            "parameters": []
+        },
+        {
+            "ident": "Collision/OnCollisionExit2D",
+            "name": "OnCollisionExit2D",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnCollisionExit2D.html",
+            "doc": "Sent when a collider on another object stops touching this object's collider (2D physics only).\n\nUse the 'with Info' variant of this Event if you need Collision information like contact points, impact velocity, etc. This event avoids unnecessary calculations since it does not provide the collision information.\n\nNotes: Collision events are only sent if one of the colliders also has a non-kinematic rigidbody attached. Collision events will be sent to disabled MonoBehaviours, to allow enabling Behaviours in response to collisions.",
+            "parameters": []
+        },
+        {
+            "ident": "Collision/OnCollisionStay",
+            "name": "OnCollisionStay",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnCollisionStay.html",
+            "doc": "OnCollisionStay is called once per frame for every collider/rigidbody that is touching rigidbody/collider.\n\nUse the 'with Info' variant of this Event if you need Collision information like contact points, impact velocity, etc. This event avoids unnecessary calculations since it does not provide the collision information.\n\nNotes: Collision events are only sent if one of the colliders also has a non-kinematic rigidbody attached. Collision events will be sent to disabled MonoBehaviours, to allow enabling Behaviours in response to collisions.",
+            "parameters": []
+        },
+        {
+            "ident": "Collision/OnCollisionStay2D",
+            "name": "OnCollisionStay2D",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnCollisionStay2D.html",
+            "doc": "Sent each frame where a collider on another object is touching this object's collider (2D physics only).\n\nUse the 'with Info' variant of this Event if you need Collision information like contact points, impact velocity, etc. This event avoids unnecessary calculations since it does not provide the collision information.\n\nNotes: Collision events are only sent if one of the colliders also has a non-kinematic rigidbody attached. Collision events will be sent to disabled MonoBehaviours, to allow enabling Behaviours in response to collisions.",
+            "parameters": []
+        },
+        {
+            "ident": "Collision/OnControllerColliderHit",
+            "name": "OnControllerColliderHit",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnControllerColliderHit.html",
+            "doc": "OnControllerColliderHit is called when the controller hits a collider while performing a Move.\n\nThis can be used to push objects when they collide with the character.",
+            "parameters": []
+        },
+        {
+            "ident": "Collision/OnParticleCollision",
+            "name": "OnParticleCollision",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnParticleCollision.html",
+            "doc": "OnParticleCollision is called when a particle hits a collider.\n\nThis can be used to apply damage to a game object when hit by particles.<b>Legacy particle system:</b> This message is sent to all scripts attached to the <b>WorldParticleCollider</b> and to the Collider that was hit. The message is only sent if you enable <b>sendCollisionMessage</b> in the inspector of the <b>WorldParticleCollider</b>.",
+            "parameters": []
+        },
+        {
+            "ident": "Collision/with Info/OnCollisionEnter(...)",
+            "name": "OnCollisionEnter(...)",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnCollisionEnter.html",
+            "doc": "OnCollisionEnter is called when this collider/rigidbody has begun touching another rigidbody/collider.\n\nCollision class is sent which contains information about contact points, impact velocity, etc. Notes: Collision events are only sent if one of the colliders also has a non-kinematic rigidbody attached. Collision events will be sent to disabled MonoBehaviours, to allow enabling Behaviours in response to collisions.",
+            "parameters": []
+        },
+        {
+            "ident": "Collision/with Info/OnCollisionEnter2D(...)",
+            "name": "OnCollisionEnter2D(...)",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnCollisionEnter2D.html",
+            "doc": "Sent when an incoming collider makes contact with this object's collider (2D physics only).\n\nCollision class is sent which contains information about contact points, impact velocity, etc. Notes: Collision events are only sent if one of the colliders also has a non-kinematic rigidbody attached. Collision events will be sent to disabled MonoBehaviours, to allow enabling Behaviours in response to collisions.",
+            "parameters": []
+        },
+        {
+            "ident": "Collision/with Info/OnCollisionExit(...)",
+            "name": "OnCollisionExit(...)",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnCollisionExit.html",
+            "doc": "OnCollisionExit is called when this collider/rigidbody has stopped touching another rigidbody/collider.\n\nCollision class is sent which contains information about contact points, impact velocity, etc. Notes: Collision events are only sent if one of the colliders also has a non-kinematic rigidbody attached. Collision events will be sent to disabled MonoBehaviours, to allow enabling Behaviours in response to collisions.",
+            "parameters": []
+        },
+        {
+            "ident": "Collision/with Info/OnCollisionExit2D(...)",
+            "name": "OnCollisionExit2D(...)",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnCollisionExit2D.html",
+            "doc": "Sent when a collider on another object stops touching this object's collider (2D physics only).\n\nCollision class is sent which contains information about contact points, impact velocity, etc. Notes: Collision events are only sent if one of the colliders also has a non-kinematic rigidbody attached. Collision events will be sent to disabled MonoBehaviours, to allow enabling Behaviours in response to collisions.",
+            "parameters": []
+        },
+        {
+            "ident": "Collision/with Info/OnCollisionStay(...)",
+            "name": "OnCollisionStay(...)",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnCollisionStay.html",
+            "doc": "OnCollisionStay is called once per frame for every collider/rigidbody that is touching rigidbody/collider.\n\nCollision class is sent which contains information about contact points, impact velocity, etc. Notes: Collision events are only sent if one of the colliders also has a non-kinematic rigidbody attached. Collision events will be sent to disabled MonoBehaviours, to allow enabling Behaviours in response to collisions.",
+            "parameters": []
+        },
+        {
+            "ident": "Collision/with Info/OnCollisionStay2D(...)",
+            "name": "OnCollisionStay2D(...)",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnCollisionStay2D.html",
+            "doc": "Sent each frame where a collider on another object is touching this object's collider (2D physics only).\n\nCollision class is sent which contains information about contact points, impact velocity, etc. Notes: Collision events are only sent if one of the colliders also has a non-kinematic rigidbody attached. Collision events will be sent to disabled MonoBehaviours, to allow enabling Behaviours in response to collisions.",
+            "parameters": []
+        },
+        {
+            "ident": "Input/OnMouseDown",
+            "name": "OnMouseDown",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnMouseDown.html",
+            "doc": "OnMouseDown is called when the user has pressed the mouse button while over the GUIElement or Collider.\n\nThis event is sent to all Blox of the Collider or GUIElement.",
+            "parameters": []
+        },
+        {
+            "ident": "Input/OnMouseDrag",
+            "name": "OnMouseDrag",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnMouseDrag.html",
+            "doc": "OnMouseDrag is called when the user has clicked on a GUIElement or Collider and is still holding down the mouse.\n\nOnMouseDrag is called every frame while the mouse is down.",
+            "parameters": []
+        },
+        {
+            "ident": "Input/OnMouseEnter",
+            "name": "OnMouseEnter",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnMouseEnter.html",
+            "doc": "Called when the mouse enters the GUIElement or Collider.\n\nThe corresponding OnMouseOver event is called while the mouse stays over the object and OnMouseExit is called when it moves away.",
+            "parameters": []
+        },
+        {
+            "ident": "Input/OnMouseExit",
+            "name": "OnMouseExit",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnMouseExit.html",
+            "doc": "Called when the mouse is not any longer over the GUIElement or Collider.\n\nA call to OnMouseExit follows the corresponding calls to OnMouseEnter and OnMouseOver. This event is not called on objects that belong to Ignore Raycast layer.This event is called on Colliders marked as Trigger if and only if Physics.queriesHitTriggers is true. You can use OnMouseExit as a co-routine (wait Blocks can be used). This event is sent to all Blox attached to the Collider or GUIElement.",
+            "parameters": []
+        },
+        {
+            "ident": "Input/OnMouseOver",
+            "name": "OnMouseOver",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnMouseOver.html",
+            "doc": "Called every frame while the mouse is over the GUIElement or Collider.\n\nA call to OnMouseEnter occurs on the first frame the mouse is over the object. OnMouseOver is then called each frame until the mouse moves away, at which point OnMouseExit is called. This event is not called on objects that belong to Ignore Raycast layer. This event is called on Colliders marked as Trigger if and only if Physics.queriesHitTriggers is true. OnMouseOver can be a co-routine (wait blocks can be used). This event is sent to all Blox attached to the Collider or GUIElement.",
+            "parameters": []
+        },
+        {
+            "ident": "Input/OnMouseUp",
+            "name": "OnMouseUp",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnMouseUp.html",
+            "doc": "OnMouseUp is called when the user has released the mouse button.\n\nNote that OnMouseUp is called even if the mouse is not over the same GUIElement or Collider as the one the mouse has been pressed down on. For button-like behavior see: OnMouseUpAsButton.",
+            "parameters": []
+        },
+        {
+            "ident": "Input/OnMouseUpAsButton",
+            "name": "OnMouseUpAsButton",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnMouseUpAsButton.html",
+            "doc": "OnMouseUpAsButton is only called when the mouse is released over the same GUIElement or Collider as it was pressed.\n\nSee Also: OnMouseUp.",
+            "parameters": []
+        },
+        {
+            "ident": "Network/OnConnectedToServer",
+            "name": "OnConnectedToServer",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnConnectedToServer.html",
+            "doc": "Called on the client when you have successfully connected to a server.\n\n",
+            "parameters": []
+        },
+        {
+            "ident": "Network/OnDisconnectedFromServer",
+            "name": "OnDisconnectedFromServer",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnDisconnectedFromServer.html",
+            "doc": "Called on the client when the connection was lost or you disconnected from the server.\n\n",
+            "parameters": []
+        },
+        {
+            "ident": "Network/OnFailedToConnect",
+            "name": "OnFailedToConnect",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnFailedToConnect.html",
+            "doc": "Called on the client when a connection attempt fails for some reason.\n\nThe reason why it fails is passed in as a NetworkConnectionError enum.",
+            "parameters": []
+        },
+        {
+            "ident": "Network/OnFailedToConnectToMasterServer",
+            "name": "OnFailedToConnectToMasterServer",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnFailedToConnectToMasterServer.html",
+            "doc": "Called on clients or servers when there is a problem connecting to the MasterServer.\n\nThe reason for the error is passed in as a NetworkConnectionError enum.",
+            "parameters": []
+        },
+        {
+            "ident": "Network/OnMasterServerEvent",
+            "name": "OnMasterServerEvent",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnMasterServerEvent.html",
+            "doc": "Called on clients or servers when reporting events from the MasterServer.\n\nLike, for example, when a host list has been received or host registration succeeded.",
+            "parameters": []
+        },
+        {
+            "ident": "Network/OnNetworkInstantiate",
+            "name": "OnNetworkInstantiate",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnNetworkInstantiate.html",
+            "doc": "Called on objects which have been network instantiated with Network.Instantiate.\n\nThis is useful for disabling or enabling components for objects which have been instantiated and their behavior depends on if they are locally or remotely owned.Note: The networkView attribute inside the NetworkMessageInfo is not used inside OnNetworkInstantiate.",
+            "parameters": []
+        },
+        {
+            "ident": "Network/OnPlayerConnected",
+            "name": "OnPlayerConnected",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnPlayerConnected.html",
+            "doc": "Called on the server whenever a new player has successfully connected.\n\n",
+            "parameters": []
+        },
+        {
+            "ident": "Network/OnPlayerDisconnected",
+            "name": "OnPlayerDisconnected",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnPlayerDisconnected.html",
+            "doc": "Called on the server whenever a player disconnected from the server.\n\n",
+            "parameters": []
+        },
+        {
+            "ident": "Network/OnSerializeNetworkView",
+            "name": "OnSerializeNetworkView",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnSerializeNetworkView.html",
+            "doc": "Used to customize synchronization of variables in a script watched by a network view.\n\nIt is automatically determined if the variables being serialized should be sent or received,  see example below for a better description. This depends on who owns the object, i.e. the owner sends and all others receive.",
+            "parameters": []
+        },
+        {
+            "ident": "Network/OnServerInitialized",
+            "name": "OnServerInitialized",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnServerInitialized.html",
+            "doc": "Called on the server whenever a Network.InitializeServer was invoked and has completed.\n\n",
+            "parameters": []
+        },
+        {
+            "ident": "Trigger/OnTriggerEnter",
+            "name": "OnTriggerEnter",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnTriggerEnter.html",
+            "doc": "OnTriggerEnter is called when the Collider enters the trigger.\n\nUse the 'with info' variant if you need more information about Collider that interacted with this trigger. This message is sent to the trigger collider and the rigidbody (or the collider if there is no rigidbody) that touches the trigger. Notes: Trigger events are only sent if one of the colliders also has a rigidbody attached. Trigger events will be sent to disabled MonoBehaviours, to allow enabling Behaviours in response to collisions.",
+            "parameters": []
+        },
+        {
+            "ident": "Trigger/OnTriggerEnter2D",
+            "name": "OnTriggerEnter2D",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnTriggerEnter2D.html",
+            "doc": "Sent when another object enters a trigger collider attached to this object (2D physics only).\n\nUse the 'with info' variant if you need more information about Collider that interacted with this trigger. This message is sent to the trigger collider and the rigidbody (or the collider if there is no rigidbody) that touches the trigger. Notes: Trigger events are only sent if one of the colliders also has a rigidbody attached. Trigger events will be sent to disabled MonoBehaviours, to allow enabling Behaviours in response to collisions.",
+            "parameters": []
+        },
+        {
+            "ident": "Trigger/OnTriggerExit",
+            "name": "OnTriggerExit",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnTriggerExit.html",
+            "doc": "OnTriggerExit is called when the Collider has stopped touching the trigger.Use the 'with info' variant if you need more information about Collider that interacted with this trigger. This message is sent to the trigger collider and the rigidbody (or the collider if there is no rigidbody) that touches the trigger. Notes: Trigger events are only sent if one of the colliders also has a rigidbody attached. Trigger events will be sent to disabled MonoBehaviours, to allow enabling Behaviours in response to collisions.",
+            "parameters": []
+        },
+        {
+            "ident": "Trigger/OnTriggerExit2D",
+            "name": "OnTriggerExit2D",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnTriggerExit2D.html",
+            "doc": "Sent when another object leaves a trigger collider attached to this object (2D physics only).Use the 'with info' variant if you need more information about Collider that interacted with this trigger. This message is sent to the trigger collider and the rigidbody (or the collider if there is no rigidbody) that touches the trigger. Notes: Trigger events are only sent if one of the colliders also has a rigidbody attached. Trigger events will be sent to disabled MonoBehaviours, to allow enabling Behaviours in response to collisions.",
+            "parameters": []
+        },
+        {
+            "ident": "Trigger/OnTriggerStay",
+            "name": "OnTriggerStay",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnTriggerStay.html",
+            "doc": "OnTriggerStay is called once per frame for every Collider that is touching the trigger.Use the 'with info' variant if you need more information about Collider that interacted with this trigger. This message is sent to the trigger collider and the rigidbody (or the collider if there is no rigidbody) that touches the trigger. Notes: Trigger events are only sent if one of the colliders also has a rigidbody attached. Trigger events will be sent to disabled MonoBehaviours, to allow enabling Behaviours in response to collisions.",
+            "parameters": []
+        },
+        {
+            "ident": "Trigger/OnTriggerStay2D",
+            "name": "OnTriggerStay2D",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnTriggerStay2D.html",
+            "doc": "Sent each frame where another object is within a trigger collider attached to this object (2D physics only).Use the 'with info' variant if you need more information about Collider that interacted with this trigger. This message is sent to the trigger collider and the rigidbody (or the collider if there is no rigidbody) that touches the trigger. Notes: Trigger events are only sent if one of the colliders also has a rigidbody attached. Trigger events will be sent to disabled MonoBehaviours, to allow enabling Behaviours in response to collisions.",
+            "parameters": []
+        },
+        {
+            "ident": "Trigger/with Info/OnTriggerEnter(...)",
+            "name": "OnTriggerEnter(...)",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnTriggerEnter.html",
+            "doc": "OnTriggerEnter is called when the Collider enters the trigger.\n\nThis event also provides information about Collider that interacted with this trigger. This message is sent to the trigger collider and the rigidbody (or the collider if there is no rigidbody) that touches the trigger. Notes: Trigger events are only sent if one of the colliders also has a rigidbody attached. Trigger events will be sent to disabled MonoBehaviours, to allow enabling Behaviours in response to collisions.",
+            "parameters": []
+        },
+        {
+            "ident": "Trigger/with Info/OnTriggerEnter2D(...)",
+            "name": "OnTriggerEnter2D(...)",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnTriggerEnter2D.html",
+            "doc": "Sent when another object enters a trigger collider attached to this object (2D physics only).\n\nThis event also provides information about Collider that interacted with this trigger. This message is sent to the trigger collider and the rigidbody (or the collider if there is no rigidbody) that touches the trigger. Notes: Trigger events are only sent if one of the colliders also has a rigidbody attached. Trigger events will be sent to disabled MonoBehaviours, to allow enabling Behaviours in response to collisions.",
+            "parameters": []
+        },
+        {
+            "ident": "Trigger/with Info/OnTriggerExit(...)",
+            "name": "OnTriggerExit(...)",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnTriggerExit.html",
+            "doc": "OnTriggerExit is called when the Collider has stopped touching the trigger.\n\nThis event also provides information about Collider that interacted with this trigger. This message is sent to the trigger collider and the rigidbody (or the collider if there is no rigidbody) that touches the trigger. Notes: Trigger events are only sent if one of the colliders also has a rigidbody attached. Trigger events will be sent to disabled MonoBehaviours, to allow enabling Behaviours in response to collisions.",
+            "parameters": []
+        },
+        {
+            "ident": "Trigger/with Info/OnTriggerExit2D(...)",
+            "name": "OnTriggerExit2D(...)",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnTriggerExit2D.html",
+            "doc": "Sent when another object leaves a trigger collider attached to this object (2D physics only).\n\nThis event also provides information about Collider that interacted with this trigger. This message is sent to the trigger collider and the rigidbody (or the collider if there is no rigidbody) that touches the trigger. Notes: Trigger events are only sent if one of the colliders also has a rigidbody attached. Trigger events will be sent to disabled MonoBehaviours, to allow enabling Behaviours in response to collisions.",
+            "parameters": []
+        },
+        {
+            "ident": "Trigger/with Info/OnTriggerStay(...)",
+            "name": "OnTriggerStay(...)",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnTriggerStay.html",
+            "doc": "OnTriggerStay is called once per frame for every Collider that is touching the trigger.\n\nThis event also provides information about Collider that interacted with this trigger. This message is sent to the trigger collider and the rigidbody (or the collider if there is no rigidbody) that touches the trigger. Notes: Trigger events are only sent if one of the colliders also has a rigidbody attached. Trigger events will be sent to disabled MonoBehaviours, to allow enabling Behaviours in response to collisions.",
+            "parameters": []
+        },
+        {
+            "ident": "Trigger/with Info/OnTriggerStay2D(...)",
+            "name": "OnTriggerStay2D(...)",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnTriggerStay2D.html",
+            "doc": "Sent each frame where another object is within a trigger collider attached to this object (2D physics only).\n\nThis event also provides information about Collider that interacted with this trigger. This message is sent to the trigger collider and the rigidbody (or the collider if there is no rigidbody) that touches the trigger. Notes: Trigger events are only sent if one of the colliders also has a rigidbody attached. Trigger events will be sent to disabled MonoBehaviours, to allow enabling Behaviours in response to collisions.",
+            "parameters": []
+        },
+        {
+            "ident": "Misc/OnAudioFilterRead",
+            "name": "OnAudioFilterRead",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnAudioFilterRead.html",
+            "doc": "If OnAudioFilterRead is implemented, Unity will insert a custom filter into the audio DSP chain.\n\nThe filter is inserted in the same order as the MonoBehaviour script is shown in the inspector. OnAudioFilterRead is called everytime a chunk of audio is routed through the filter (this happens frequently, every ~20ms depending on the samplerate and platform). The audio data is an array of floats ranging from [-1.0f;1.0f] and contains audio from the previous filter in the chain or the AudioClip on the AudioSource. If this is the first filter in the chain and a clip isn't attached to the audio source this filter will be 'played'. That way you can use the filter as the audio clip, procedurally generating audio.If OnAudioFilterRead is implemented a VU meter will show up in the inspector showing the outgoing samples level. The process time of the filter is also measured and the spent milliseconds will show up next to the VU Meter (it turns red if the filter is taking up too much time, so the mixer will starv audio data). Also note, that OnAudioFilterRead is called on a different thread from the main thread (namely the audio thread) so calling into many Unity functions from this function is not allowed ( a warning will show up ).See Also: Audio Filters.",
+            "parameters": []
+        },
+        {
+            "ident": "Misc/OnAnimatorIK",
+            "name": "OnAnimatorIK",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnAnimatorIK.html",
+            "doc": "Callback for setting up animation IK (inverse kinematics).\n\nOnAnimatorIK() is called by the Animator Component immediately before it updates its internal IK system. This callback can be used to set the positions of the IK goals and their respective weights.",
+            "parameters": []
+        },
+        {
+            "ident": "Misc/OnAnimatorMove",
+            "name": "OnAnimatorMove",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnAnimatorMove.html",
+            "doc": "Callback for processing animation movements for modifying root motion.\n\nThis callback will be invoked at each frame after the state machines and the animations have been evaluated, but before OnAnimatorIK.See Also: Root motion.",
+            "parameters": []
+        },
+        {
+            "ident": "Misc/OnApplicationFocus",
+            "name": "OnApplicationFocus",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnApplicationFocus.html",
+            "doc": "Sent to all game objects when the player gets or loses focus.\n\nOnApplicationFocus can be a co-routine (wait blocks can be used). If it is implemented as a coroutine, it will be evaluated twice during the initial frame: first as an early notification and second time during the normal coroutine update step.",
+            "parameters": []
+        },
+        {
+            "ident": "Misc/OnApplicationPause",
+            "name": "OnApplicationPause",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnApplicationPause.html",
+            "doc": "Sent to all game objects when the player pauses.\n\nOnApplicationPause can be a co-routine (wait blocks can be used). If it is implemented as a coroutine, it will be evaluated twice during the initial frame: first as an early notification and second time during the normal coroutine update step.",
+            "parameters": []
+        },
+        {
+            "ident": "Misc/OnApplicationQuit",
+            "name": "OnApplicationQuit",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnApplicationQuit.html",
+            "doc": "Sent to all game objects before the application is quit.\n\nIn the editor this is called when the user stops playmode. In the web player it is called when the web view is closed.",
+            "parameters": []
+        },
+        {
+            "ident": "Misc/OnBecameInvisible",
+            "name": "OnBecameInvisible",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnBecameInvisible.html",
+            "doc": "OnBecameInvisible is called when the renderer is no longer visible by any camera.\n\nThis message is sent to all scripts attached to the renderer. OnBecameVisible and OnBecameInvisible is useful to avoid computations that are only necessary when the object is visible.",
+            "parameters": []
+        },
+        {
+            "ident": "Misc/OnBecameVisible",
+            "name": "OnBecameVisible",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnBecameVisible.html",
+            "doc": "OnBecameVisible is called when the renderer became visible by any camera.\n\nThis message is sent to all scripts attached to the renderer. OnBecameVisible and OnBecameInvisible is useful to avoid computations that are only necessary when the object is visible.",
+            "parameters": []
+        },
+        {
+            "ident": "Misc/OnDrawGizmos",
+            "name": "OnDrawGizmos",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnDrawGizmos.html",
+            "doc": "Implement OnDrawGizmos if you want to draw gizmos that are also pickable and always drawn.\n\nThis allows you to quickly pick important objects in your scene.Note that OnDrawGizmos will use a mouse position that is relative to the Scene View.This function does  get called if the component is collapsed in the inspector. Use OnDrawGizmosSelected to draw gizmos when the game object is selected.",
+            "parameters": []
+        },
+        {
+            "ident": "Misc/OnDrawGizmosSelected",
+            "name": "OnDrawGizmosSelected",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnDrawGizmosSelected.html",
+            "doc": "Implement this OnDrawGizmosSelected if you want to draw gizmos only if the object is selected.\n\nGizmos are drawn only when the object is selected. Gizmos are not pickable. This is used to ease setup. For example an explosion script could draw a sphere showing the explosion radius.",
+            "parameters": []
+        },
+        {
+            "ident": "Misc/OnGUI",
+            "name": "OnGUI",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnGUI.html",
+            "doc": "OnGUI is called for rendering and handling GUI events.\n\nThis means that your OnGUI implementation might be called several times per frame (one call per event). For more information on GUI events see the Event reference. If the MonoBehaviour's enabled property is set to false, OnGUI() will not be called.",
+            "parameters": []
+        },
+        {
+            "ident": "Misc/OnJointBreak",
+            "name": "OnJointBreak",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnJointBreak.html",
+            "doc": "Called when a joint attached to the same game object broke.\n\nWhen a force that is higher than the breakForce of the joint, the joint will break off. When the joint breaks off, OnJointBreak will be called and the break force applied to the joint will be passed in. After OnJointBreak the joint will automatically be removed from the game object and deleted.See Also: Joint.breakForce.",
+            "parameters": []
+        },
+        {
+            "ident": "Misc/OnLevelWasLoaded",
+            "name": "OnLevelWasLoaded",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnLevelWasLoaded.html",
+            "doc": "This function is called after a new level was loaded.\n\n<b>level</b> is the index of the level that was loaded. Use the menu item <i>File-&gt;Build Settings...</i> to see what scene the index refers to. See Also: Application.LoadLevel.",
+            "parameters": []
+        },
+        {
+            "ident": "Misc/OnTransformChildrenChanged",
+            "name": "OnTransformChildrenChanged",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnTransformChildrenChanged.html",
+            "doc": "This function is called when the list of children of the transform of the GameObject has changed.\n\n",
+            "parameters": []
+        },
+        {
+            "ident": "Misc/OnTransformParentChanged",
+            "name": "OnTransformParentChanged",
+            "url": "http://docs.unity3d.com/ScriptReference/MonoBehaviour.OnTransformParentChanged.html",
+            "doc": "This function is called when the parent property of the transform of the GameObject has changed.\n\n",
+            "parameters": []
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+// All Blocks uses the same text colour. It is a hex-triplet where the first two 
+// are the Red component then follows the green component and finally blue
+// See https://en.wikipedia.org/wiki/Web_colors for more info
+// The default value (#FFFFFF) is White
+
+#FFFFFF

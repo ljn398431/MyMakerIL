@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BloxEngine</name>
+    </assembly>
+    <members>
+        <member name="M:BloxEngine.BloxMemberInfo.SimpleMemberPath(BloxEngine.BloxMemberInfo)">
+            <summary> returns "TypeName.MemberName" </summary>
+        </member>
+        <member name="M:BloxEngine.BloxMemberInfo.FullMemberPath(BloxEngine.BloxMemberInfo)">
+            <summary> returns "TypeFullName.MemberName" </summary>
+        </member>
+        <member name="T:BloxEngine.Databinding.DataBinding">
+            <summary> DataBinding is used by DataProvider to bind to data </summary>
+        </member>
+        <member name="T:BloxEngine.Databinding.DataProvider">
+            <summary> The DataProvider can perform actions on data and return a value </summary>
+        </member>
+        <member name="T:BloxEngine.Databinding.Property">
+            <summary> A property has a value and will trigger an event when that value changes </summary>
+        </member>
+        <member name="T:BloxEngine.Databinding.Property`1">
+            <summary> A property has a value and will trigger an event when that value changes </summary>
+        </member>
+        <member name="F:BloxEngine.Variables.plyVariables.varDefs">
+            <summary>don't access this directly at runtime. use provided function(s)</summary>
+        </member>
+        <member name="M:BloxEngine.BloxContainer.TriggerEvent(System.String)">
+            <summary> This is used to trigger Custom Events; not any of the System or other Defined Events</summary>
+        </member>
+        <member name="M:BloxEngine.BloxContainer.TriggerEvent(System.String,BloxEngine.BloxEventArg[])">
+            <summary> This is used to trigger Custom Events; not any of the System or other Defined Events</summary>
+        </member>
+        <member name="M:BloxEngine.BloxContainer.TriggerEvent(System.String,System.Single)">
+            <summary> This is used to trigger Custom Events; not any of the System or other Defined Events</summary>
+        </member>
+        <member name="M:BloxEngine.BloxContainer.TriggerEvent(System.String,System.Single,BloxEngine.BloxEventArg[])">
+            <summary> This is used to trigger Custom Events; not any of the System or other Defined Events</summary>
+        </member>
+        <member name="M:BloxEngine.BloxContainer.SendMessage(System.String,System.Object[])">
+            <summary> A special version of SendMessage which can send multiple values to target function. You must send 
+            exact value types in the order the target function expects them to be. This will grab the first function from
+            each component with the given name so be sure to use unique names else use the 2nd variation of this function. </summary>
+        </member>
+        <member name="M:BloxEngine.BloxContainer.SendMessage(System.String,System.Type[],System.Object[])">
+            <summary> A special version of SendMessage which can send multiple values to target function. You must send 
+            exact value types in the order the target function expects them to be. This is a safer version of the function
+            which requires you to specify the expected types on the target function so that the exact function can 
+            be matched in components on the GameObject. </summary>
+        </member>
+        <member name="M:BloxGameSystems.ImageManager.GetSprite(System.String)">
+            <summary> Returns the Sprite with given ident (name) </summary>
+        </member>
+        <member name="M:BloxGameSystems.ImageManager.GetSprite(System.Int32)">
+            <summary> Returns the Sprite with given id </summary>
+        </member>
+        <member name="M:BloxGameSystems.ImageManager.GetId(System.String)">
+            <summary> Returns the ID of the image with given ident (name). Returns -1 if not found. </summary>
+        </member>
+        <member name="M:BloxGameSystems.ImageManager.GetIdent(System.Int32)">
+            <summary> Returns the ident (name) of the image with given id. Returns null if not found. </summary>
+        </member>
+        <member name="M:BloxGameSystems.ICharacterAttributesOwner.GetAttributeValue(System.String)">
+            <summary> Return the value of Character Attribute. </summary>
+        </member>
+        <member name="M:BloxGameSystems.ICharacterAttributesOwner.GetAttributeMaxValue(System.String)">
+            <summary> Return the max value of Character Attribute. </summary>
+        </member>
+        <member name="M:BloxGameSystems.ICharacterAttributesOwner.SetAttributeValue(System.String,System.Single)">
+            <summary> Set the value of Character Attribute. </summary>
+        </member>
+        <member name="M:BloxGameSystems.ICharacterAttributesOwner.SetAttributeMaxValue(System.String,System.Single)">
+            <summary> Set the max value of Character Attribute. </summary>
+        </member>
+        <member name="M:BloxGameSystems.ICharacterAttributesOwner.ChangeAttributeValueBy(System.String,System.Single)">
+            <summary> Change the value of Character Attribute by certain amount. You can send either a negative or positive value depending on whether you want to add to or remove from the attribute's value. </summary>
+        </member>
+        <member name="M:BloxGameSystems.ICharacterAttributesOwner.ChangeAttributeMaxValueBy(System.String,System.Single)">
+            <summary> Change the max value of Character Attribute by certain amount. You can send either a negative or positive value depending on whether you want to add to or remove from the attribute's value. </summary>
+        </member>
+        <member name="M:BloxGameSystems.ICharacterAttributesOwner.GetAttribute(System.String)">
+            <summary> Returns reference to a character's attribute object </summary>
+        </member>
+        <member name="M:BloxGameSystems.ICharacterAttributesOwner.GetAttribute(System.Int32)">
+            <summary> Returns reference to a character's attribute object </summary>
+        </member>
+        <member name="M:BloxGameSystems.UICommon.TriggerSplashScreenEnd">
+            <summary> This can be called to skip a screen set to `Wait Screen End Trigger`</summary>
+        </member>
+        <member name="M:BloxGameSystems.UICommon.ShowWindow(System.String)">
+            <summary> Make the named window object visible/ active . This window must be added to the list of windows of the `WindowManager` component. </summary>
+        </member>
+        <member name="M:BloxGameSystems.UICommon.HideWindow(System.String)">
+            <summary> Hide (deactivate) the named window object. This window must be added to the list of windows of the `WindowManager` component. </summary>
+        </member>
+        <member name="M:BloxGameSystems.UICommon.WindowIsVisible(System.String)">
+            <summary> Returns True if the named window object is visible (active), else False. This window must be added to the list of windows of the `WindowManager` component. </summary>
+        </member>
+        <member name="M:BloxGameSystems.WindowManager.ShowWindow(System.String)">
+            <summary> Make the named window object visible/ active . This window must be added to the list of windows of the `WindowManager` component. </summary>
+        </member>
+        <member name="M:BloxGameSystems.WindowManager.HideWindow(System.String)">
+            <summary> Hide (deactivate) the named window object. This window must be added to the list of windows of the `WindowManager` component. </summary>
+        </member>
+        <member name="M:BloxGameSystems.WindowManager.WindowIsVisible(System.String)">
+            <summary> Returns True if the named window object is visible (active), else False. This window must be added to the list of windows of the `WindowManager` component. </summary>
+        </member>
+        <member name="M:BloxGameSystems.SplashScreensManager.TriggerScreenEnd">
+            <summary> This can be called to skip a screen set to `Wait Screen End Trigger`</summary>
+        </member>
+        <member name="T:BloxGameSystems.GameGlobal">
+            <summary> Game Global is a helper which provides access to global and commonly used properties. Most of these will also have Blocks which you will find under `GameSystems > GameGlobal` and can also be accessed by the Data Binding system. </summary>
+        </member>
+        <member name="F:BloxGameSystems.GameGlobal.GamePaused">
+            <summary> Set this boolean to True to "pause" the game. Game systems with Player and NPC control are expected to make use of this flag but it is still up to individual systems to decide whether to honour this flag or not. The default state is False.</summary>
+        </member>
+        <member name="P:BloxGameSystems.GameGlobal.ScenesAreLoading">
+            <summary> Returns True while there are scene loading </summary>
+        </member>
+        <member name="P:BloxGameSystems.SettingsManager.Fullscreen">
+            <summary> Get or Set whether the game is in 
+            fullscreen mode or not. </summary>
+        </member>
+        <member name="P:BloxGameSystems.SettingsManager.ScreenResolutionIndex">
+            <summary> Get or Set the screen resolution index. This is an integer value representing a resolution from
+            the list of supported resolutions.
+            
+            The list of resolutions can be retrieved via ScreenResolutions. 
+            It will return -1 if the resolution index could not be determined</summary>
+        </member>
+        <member name="M:BloxGameSystems.SettingsManager.ScreenResolutions">
+            <summary> A list of strings representing the available screen resolutions.
+            It is in the format "WxH", ex "1920x1080".
+            Note that this will return a test entry of "640x480"
+            when running in the Unity Editor since Unity does 
+            not allow changing of resolution when running
+            the inside the editor.</summary>
+        </member>
+        <member name="P:BloxGameSystems.SettingsManager.GFXQualityLevels">
+            <summary> An array of quality level names as set up in Quality Settings editor; menu: Edit > Project Settings > Quality </summary>
+        </member>
+        <member name="P:BloxGameSystems.SettingsManager.GFXQualityLevelIndex">
+            <summary> Get or Set the quality level to use by the index into the list of defined quality levels. The 1st defined level's index will be 0, the 2nd will be 1, the 3rd will be 2, and so on.
+            These quality levels are created in the Quality Settings editor; menu: Edit > Project Settings > Quality </summary>
+        </member>
+        <member name="P:BloxGameSystems.SettingsManager.SoundVolume_Main">
+            <summary> Set or Get the Main sound volume. The value is a float value between 0 (no sound) and 1 (full). So (0.5) is half the sound volume.</summary>
+        </member>
+        <member name="P:BloxGameSystems.SettingsManager.SoundVolume_Music">
+            <summary> Set or Get the Music sound volume. The value is a float value between 0 (no sound) and 1 (full). So (0.5) is half the sound volume.</summary>
+        </member>
+        <member name="P:BloxGameSystems.SettingsManager.SoundVolume_Ambient">
+            <summary> Set or Get the Ambient sound volume. The value is a float value between 0 (no sound) and 1 (full). So (0.5) is half the sound volume.</summary>
+        </member>
+        <member name="P:BloxGameSystems.SettingsManager.SoundVolume_Effects">
+            <summary> Set or Get the Effects sound volume. The value is a float value between 0 (no sound) and 1 (full). So (0.5) is half the sound volume.</summary>
+        </member>
+        <member name="P:BloxGameSystems.SettingsManager.SoundVolume_Voice">
+            <summary> Set or Get the Voice sound volume. The value is a float value between 0 (no sound) and 1 (full). So (0.5) is half the sound volume.</summary>
+        </member>
+        <member name="P:BloxGameSystems.SettingsManager.SoundVolume_GUI">
+            <summary> Set or Get the GUI sound volume. The value is a float value between 0 (no sound) and 1 (full). So (0.5) is half the sound volume.</summary>
+        </member>
+        <member name="P:BloxGameSystems.SettingsManager.SoundVolume_Other1">
+            <summary> Set or Get the Other1 sound volume. The value is a float value between 0 (no sound) and 1 (full). So (0.5) is half the sound volume.</summary>
+        </member>
+        <member name="P:BloxGameSystems.SettingsManager.SoundVolume_Other2">
+            <summary> Set or Get the Other2 sound volume. The value is a float value between 0 (no sound) and 1 (full). So (0.5) is half the sound volume.</summary>
+        </member>
+        <member name="P:BloxGameSystems.SettingsManager.SoundVolume_Other3">
+            <summary> Set or Get the Other3 sound volume. The value is a float value between 0 (no sound) and 1 (full). So (0.5) is half the sound volume.</summary>
+        </member>
+        <member name="P:BloxGameSystems.SettingsManager.SoundVolume_Other4">
+            <summary> Set or Get the Other4 sound volume. The value is a float value between 0 (no sound) and 1 (full). So (0.5) is half the sound volume.</summary>
+        </member>
+        <member name="P:BloxGameSystems.SettingsManager.SoundVolume_Other5">
+            <summary> Set or Get the Other5 sound volume. The value is a float value between 0 (no sound) and 1 (full). So (0.5) is half the sound volume.</summary>
+        </member>
+        <member name="M:BloxGameSystems.SettingsManager.SetMainSoundVolume(System.Single)">
+            <summary> Set main sound volume. The value is a float value between 0 (no sound) and 1 (full). So (0.5) is half the sound volume.</summary>
+        </member>
+        <member name="M:BloxGameSystems.SettingsManager.GetMainSoundVolume">
+            <summary> Get main sound volume. The value is a float value between 0 (no sound) and 1 (full). So (0.5) is half the sound volume.</summary>
+        </member>
+        <member name="M:BloxGameSystems.SettingsManager.SetSoundVolume(BloxGameSystems.SoundVolumeType,System.Single)">
+            <summary> Set sound volume of specified sound type. The value is a float value between 0 (no sound) and 1 (full). So (0.5) is half the sound volume.</summary>
+        </member>
+        <member name="M:BloxGameSystems.SettingsManager.GetSoundVolume(BloxGameSystems.SoundVolumeType)">
+            <summary> Get sound volume of specified sound type. The value is a float value between 0 (no sound) and 1 (full). So (0.5) is half the sound volume.</summary>
+        </member>
+        <member name="M:BloxGameSystems.PropertiesManager.SetValue(System.String,System.Object)">
+            <summary> Set the value of a managed property. The property must have a setter bind else this will fail. </summary>
+        </member>
+        <member name="M:BloxGameSystems.PropertiesManager.GetValue(System.String)">
+            <summary> Get value from a managed property. The property must have a getter bind else this will fail and return null. </summary>
+        </member>
+        <member name="M:BloxGameSystems.PropertiesManager.GetProperty(System.String)">
+            <summary> Returns reference to a ManagedProperty. This reference should not be used to write values to the property if the value must be persisted. Rather use PropertiesManager.SetValue() </summary>
+        </member>
+    </members>
+</doc>

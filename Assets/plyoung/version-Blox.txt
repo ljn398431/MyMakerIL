@@ -1,0 +1,8 @@
+﻿Version 3.4.1
+
+- Update notes available at http://forum.plyoung.com/t/blox-3-updates/
+- Documentation: https://plyoung.github.io/blox.html
+- Support: http://forum.plyoung.com/c/blox-3
+
+
+
