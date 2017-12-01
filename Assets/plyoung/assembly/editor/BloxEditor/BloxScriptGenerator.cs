@@ -125,7 +125,8 @@ namespace BloxEditor
 			}
 			else
 			{
-				BloxEd.Instance.LoadBlockDefs(false);
+                Debug.Log("GenerateAllScripts ", "BloxEditor.BloxScriptGenerator", Color.green);
+                BloxEd.Instance.LoadBlockDefs(false);
 				BloxEd.Instance.LoadEventDefs();
 				float num = 0f;
 				float num2 = 0.05f;

@@ -281,7 +281,8 @@ namespace BloxEditor
 
 		public void LoadEventDefs()
 		{
-			if (!this.EventDefsLoading && this.eventDefs.Count == 0)
+            Debug.Log("LoadEventDefs ", "BloxEd", Color.green);
+            if (!this.EventDefsLoading && this.eventDefs.Count == 0)
 			{
 				this.EventDefsLoading = true;
 				plyEdCoroutine obj = this.evnloader;

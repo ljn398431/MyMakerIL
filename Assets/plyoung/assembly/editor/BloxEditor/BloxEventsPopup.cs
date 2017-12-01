@@ -124,8 +124,9 @@ namespace BloxEditor
 		}
 
 		private IEnumerator LoadEventDefs()
-		{
-			BloxEd.Instance.LoadEventDefs();
+        {
+            Debug.Log("LoadEventDefs ", "BloxEditor.BloxEventsPopup", Color.green);
+            BloxEd.Instance.LoadEventDefs();
 			while (BloxEd.Instance.EventDefsLoading)
 			{
 				yield return (object)null;

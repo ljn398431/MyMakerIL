@@ -5,6 +5,9 @@ using UnityEngine;
 
 namespace BloxEditor
 {
+    /// <summary>
+    /// blox ап╠М 
+    /// </summary>
 	public class BloxListWindow : EditorWindow
 	{
 		private static readonly GUIContent GC_Add = new GUIContent(Ico._add + "New", "Add new Blox Definition");
@@ -25,14 +28,16 @@ namespace BloxEditor
 
 		public static void Show_BloxListWindow()
 		{
-			BloxListWindow obj = BloxListWindow.Instance = EditorWindow.GetWindow<BloxListWindow>("BloxDefs");
+            Debug.Log(" Show_BloxListWindow", "BloxListWindow", UnityEngine.Color.yellow);
+            BloxListWindow obj = BloxListWindow.Instance = EditorWindow.GetWindow<BloxListWindow>("BloxDefs");
 			Texture2D image = plyEdGUI.LoadTextureResource("BloxEditor.res.icons.blox_mono" + (plyEdGUI.IsDarkSkin() ? "_p" : "") + ".png", typeof(BloxListWindow).Assembly, FilterMode.Point, TextureWrapMode.Clamp);
 			obj.titleContent = new GUIContent("BloxDefs", image);
 		}
 
 		protected void OnEnable()
 		{
-			BloxListWindow.Instance = this;
+            Debug.Log("OnEnable", "BloxListWindow", UnityEngine.Color.yellow);
+            BloxListWindow.Instance = this;
 			Texture2D image = plyEdGUI.LoadTextureResource("BloxEditor.res.icons.blox_mono" + (plyEdGUI.IsDarkSkin() ? "_p" : "") + ".png", typeof(BloxListWindow).Assembly, FilterMode.Point, TextureWrapMode.Clamp);
 			base.titleContent = new GUIContent("BloxDefs", image);
 			BloxEd.LoadBloxGlobal();

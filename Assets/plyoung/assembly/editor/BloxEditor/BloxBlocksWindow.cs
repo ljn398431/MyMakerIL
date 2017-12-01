@@ -10,19 +10,21 @@ namespace BloxEditor
 
 		public static void Show_BloxBlocksWindow()
 		{
-			BloxEdGlobal.BlocksListDocked = false;
+            Debug.Log("Show_BloxBlocksWindow", "Blockwindows", Color.green);
+            BloxEdGlobal.BlocksListDocked = false;
 			EditorPrefs.SetBool("Blox.BlocksListDocked", BloxEdGlobal.BlocksListDocked);
 			if ((Object)BloxBlocksWindow.Instance == (Object)null)
 			{
 				BloxBlocksWindow obj = BloxBlocksWindow.Instance = EditorWindow.GetWindow<BloxBlocksWindow>("Blocks");
-				Texture2D image = plyEdGUI.LoadTextureResource("BloxEditor.res.icons.blox_mono" + (plyEdGUI.IsDarkSkin() ? "_p" : "") + ".png", typeof(BloxListWindow).Assembly, FilterMode.Point, TextureWrapMode.Clamp);
+				Texture2D image = plyEdGUI.LoadTextureResource("res.icons.blox_mono" + (plyEdGUI.IsDarkSkin() ? "_p" : "") + ".png", typeof(BloxListWindow).Assembly, FilterMode.Point, TextureWrapMode.Clamp);
 				obj.titleContent = new GUIContent("Blocks", image);
 			}
 		}
 
 		public static void Close_BloxBlocksWindow()
 		{
-			BloxEdGlobal.BlocksListDocked = true;
+            Debug.Log("Close_BloxBlocksWindow", "Blockwindows", Color.green);
+            BloxEdGlobal.BlocksListDocked = true;
 			EditorPrefs.SetBool("Blox.BlocksListDocked", BloxEdGlobal.BlocksListDocked);
 			if ((Object)BloxBlocksWindow.Instance != (Object)null)
 			{
@@ -33,20 +35,23 @@ namespace BloxEditor
 
 		protected void OnEnable()
 		{
-			BloxBlocksWindow.Instance = this;
+            Debug.Log("OnEnable", "Blockwindows", Color.green);
+            BloxBlocksWindow.Instance = this;
 			Texture2D image = plyEdGUI.LoadTextureResource("BloxEditor.res.icons.blox_mono" + (plyEdGUI.IsDarkSkin() ? "_p" : "") + ".png", typeof(BloxListWindow).Assembly, FilterMode.Point, TextureWrapMode.Clamp);
 			base.titleContent = new GUIContent("Blocks", image);
 		}
 
 		protected void OnFocus()
 		{
-			BloxBlocksWindow.Instance = this;
+            Debug.Log("OnFocus", "Blockwindows", Color.green);
+            BloxBlocksWindow.Instance = this;
 			base.wantsMouseMove = true;
 		}
 
 		protected void OnDestroy()
 		{
-			BloxBlocksWindow.Instance = null;
+            Debug.Log("OnDestroy", "Blockwindows", Color.green);
+            BloxBlocksWindow.Instance = null;
 			BloxEdGlobal.BlocksListDocked = true;
 			EditorPrefs.SetBool("Blox.BlocksListDocked", BloxEdGlobal.BlocksListDocked);
 			BloxEditorWindow instance = BloxEditorWindow.Instance;

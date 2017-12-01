@@ -243,7 +243,8 @@ namespace BloxEditor
 
 		private void DoGeneralSettings()
 		{
-			EditorGUILayout.Space();
+            Debug.Log("DoGeneralSettings", "surface", Color.cyan);
+            EditorGUILayout.Space();
 			this.scroll = EditorGUILayout.BeginScrollView(this.scroll);
 			EditorGUILayout.BeginHorizontal();
 			if (GUILayout.Button(BloxSettingsWindow.GC_Blocks, plyEdGUI.Styles.BigButton))
@@ -276,13 +277,13 @@ namespace BloxEditor
 			EditorGUI.indentLevel++;
 
             ///edit by suifeng
-            //EditorGUI.BeginChangeCheck();
-            //BloxEdGlobal.BlockTheme = EditorGUILayout.Popup(BloxSettingsWindow.GC_BlockTheme, BloxEdGlobal.BlockTheme, BloxEdGUI.BlockThemeNames);
-            //if (EditorGUI.EndChangeCheck())
-            //{
-            //    EditorPrefs.SetInt("Blox.BlockTheme", BloxEdGlobal.BlockTheme);
-            //    BloxEdGUI.UpdateBlockTheme();
-            //}
+            EditorGUI.BeginChangeCheck();
+            BloxEdGlobal.BlockTheme = EditorGUILayout.Popup(BloxSettingsWindow.GC_BlockTheme, BloxEdGlobal.BlockTheme, BloxEdGUI.BlockThemeNames);
+            if (EditorGUI.EndChangeCheck())
+            {
+                EditorPrefs.SetInt("Blox.BlockTheme", BloxEdGlobal.BlockTheme);
+                BloxEdGUI.UpdateBlockTheme();
+            }
             EditorGUI.BeginChangeCheck();
 			BloxEdGlobal.CanvasColour = EditorGUILayout.ColorField(BloxSettingsWindow.GC_CanvasColour, BloxEdGlobal.CanvasColour);
 			if (EditorGUI.EndChangeCheck())
@@ -455,6 +456,7 @@ namespace BloxEditor
 
 		private void DoBlocksSettings()
 		{
+            Debug.Log("DoBlocksSettings", "surface", Color.cyan);
 			if (this.edMode == 1)
 			{
 				this.scroll = EditorGUILayout.BeginScrollView(this.scroll);
@@ -1116,7 +1118,8 @@ namespace BloxEditor
 
 		private void DoBloxDocSettings()
 		{
-			if (this.edMode == 1)
+            Debug.Log("DoBloxDocSettings", "surface", Color.cyan);
+            if (this.edMode == 1)
 			{
 				this.scroll = EditorGUILayout.BeginScrollView(this.scroll);
 				EditorGUILayout.Space();
@@ -1185,7 +1188,8 @@ namespace BloxEditor
 		{
 			plyEdUtil.ClearUnityConsole();
 			plyEdUtil.CheckPath(BloxEdGlobal.DocsPath);
-			BloxEd.Instance.LoadEventDefs();
+            Debug.Log("GenerateAllScripts ", "BloxEditor.BloxSettingsWindow", Color.green);
+            BloxEd.Instance.LoadEventDefs();
 			while (BloxEd.Instance.EventDefsLoading)
 			{
 				yield return (object)null;
