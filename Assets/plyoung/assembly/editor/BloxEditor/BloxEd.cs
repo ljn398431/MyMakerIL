@@ -205,6 +205,7 @@ namespace BloxEditor
 					string[] files = Directory.GetFiles(plyEdUtil.ProjectFullPath + BloxEdGlobal.DefsPath);
 					for (int i = 0; i < files.Length; i++)
 					{
+                        Debug.Log("Load block asset"+ files[i], "BloxEd", Color.red);
 						Blox blox = plyEdUtil.LoadAsset<Blox>(plyEdUtil.ProjectRelativePath(files[i]));
 						if ((UnityEngine.Object)blox != (UnityEngine.Object)null && (UnityEngine.Object)BloxEd._bloxGlobalObj.FindBloxDef(blox.ident) == (UnityEngine.Object)null)
 						{
