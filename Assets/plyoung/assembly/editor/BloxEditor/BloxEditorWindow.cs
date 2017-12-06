@@ -275,6 +275,7 @@ namespace BloxEditor
         {
             if (blocksChanged)
             {
+                Debug.Log("SaveBlox", "BloxEditorWindow", Color.cyan);
                 BloxEvent ev = this.currEvent.ev;
                 if (ev != null)
                 {
@@ -487,11 +488,14 @@ namespace BloxEditor
                         this.RestoreFromDragOut();
                         this.ClearDragDropBlock();
                         current.Use();
+                        
                     }
                     else if (current.button == 0 && this.dragDropBlock != null)
                     {
                         plyEdGUI.ClearFocus();
+                        Debug.Log("current" + current, Color.blue);
                         current.Use();
+                        Debug.Log("current after" + current, Color.blue);
                         if (this.canvasRect.Contains(current.mousePosition) && !BloxPropsPanel.Instance.propsRect.Contains(current.mousePosition))
                         {
                             this.AddBlock();
@@ -511,6 +515,7 @@ namespace BloxEditor
                                 this.draggingSplitter = 0;
                                 plyEdGUI.ClearFocus();
                                 current.Use();
+                                
                             }
                             else if (BloxEdGlobal.BlocksListDocked && this.splitterRect[1].Contains(current.mousePosition))
                             {
@@ -522,7 +527,9 @@ namespace BloxEditor
                             {
                                 this.draggingCanvas = true;
                                 plyEdGUI.ClearFocus();
+                                //Debug.Log("current" + current, Color.magenta);
                                 current.Use();
+                                //Debug.Log("current after" + current, Color.magenta);
                             }
                         }
                     }

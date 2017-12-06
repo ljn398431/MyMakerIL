@@ -75,6 +75,7 @@ namespace BloxEditor.Variables
 		{
 			if (plyVariablesEditor.editors == null)
 			{
+                Debug.Log("LoadVarEds", "plyVariablesEditor", Color.magenta);
 				List<plyVarEd> list = plyCustomEd.CreateCustomEditorsList<plyVarEd>(typeof(plyVarEdAttribute));
 				list.Sort((plyVarEd a, plyVarEd b) => ((plyVarEdAttribute)a.nfo).Order.CompareTo(((plyVarEdAttribute)b.nfo).Order));
 				plyVariablesEditor.editors = new Dictionary<Type, plyVarEd>();

@@ -243,7 +243,7 @@ namespace BloxEditor
 
 		private void DoGeneralSettings()
 		{
-            Debug.Log("DoGeneralSettings", "surface", Color.cyan);
+            //Debug.Log("DoGeneralSettings", "surface", Color.cyan);
             EditorGUILayout.Space();
 			this.scroll = EditorGUILayout.BeginScrollView(this.scroll);
 			EditorGUILayout.BeginHorizontal();
@@ -402,7 +402,8 @@ namespace BloxEditor
 
 		private void CloseBlocksEdMode()
 		{
-			BloxEd.StopBloxDocFinder(false);
+            Debug.Log("CloseBlocksEdMode", "BloxSetting", Color.magenta);
+            BloxEd.StopBloxDocFinder(false);
 			if (this.scanner != null)
 			{
 				this.scanner.Stop();
@@ -415,7 +416,8 @@ namespace BloxEditor
 
 		private void GoNamespaceScanning()
 		{
-			this.edMode = 2;
+            Debug.Log("NamespaceScanner", "BloxSetting", Color.magenta);
+            this.edMode = 2;
 			this.scroll = Vector2.zero;
 			this.SetHelpText(null);
 			this.scanner = plyEdCoroutine.Start(this.NamespaceScanner(), true);
@@ -456,7 +458,7 @@ namespace BloxEditor
 
 		private void DoBlocksSettings()
 		{
-            Debug.Log("DoBlocksSettings", "surface", Color.cyan);
+            //Debug.Log("DoBlocksSettings", "surface", Color.cyan);
 			if (this.edMode == 1)
 			{
 				this.scroll = EditorGUILayout.BeginScrollView(this.scroll);
@@ -578,7 +580,8 @@ namespace BloxEditor
 
 		private IEnumerator NamespaceScanner()
 		{
-			plyEdUtil.ClearUnityConsole();
+            Debug.Log("NamespaceScanner", "BloxSetting", Color.magenta);
+            plyEdUtil.ClearUnityConsole();
 			int countBeforeYield = 200;
 			List<BloxBlockDef> defs = new List<BloxBlockDef>(10);
 			int count3 = 0;
@@ -1010,7 +1013,8 @@ namespace BloxEditor
 
 		private void EnterBloxDocEdMode()
 		{
-			this.list = new plyReorderableList(BloxEd.Instance.docsources, typeof(string), true, true, true, true, true, false, false, null, null);
+            Debug.Log("EnterBloxDocEdMode", "BloxSetting", Color.magenta);
+            this.list = new plyReorderableList(BloxEd.Instance.docsources, typeof(string), true, true, true, true, true, false, false, null, null);
 			this.list.elementHeight = (float)(EditorGUIUtility.singleLineHeight + 4.0);
 			this.list.drawHeaderCallback = this.DocSourcesList_Header;
 			this.list.drawElementCallback = this.DocSourcesList_Element;

@@ -332,7 +332,8 @@ namespace BloxEditor.Databinding
 
 		private static IEnumerator Loader()
 		{
-			int count = 0;
+            Debug.Log("Loader", "MemberBindProviderEd", Color.blue);
+            int count = 0;
 			int countBeforeYield = 20;
 			if (MemberBindProviderEd.getterBindables == null || MemberBindProviderEd.setterBindables == null)
 			{
@@ -453,7 +454,8 @@ namespace BloxEditor.Databinding
 
 		private static void ProcessBindableMember(MemberInfo mi, Type valType, bool inclOnlySpecifiedMembers)
 		{
-			bool flag = inclOnlySpecifiedMembers;
+            Debug.Log("ProcessBindableMember", "MemberBindProviderEd", Color.red);
+            bool flag = inclOnlySpecifiedMembers;
 			object[] customAttributes = mi.GetCustomAttributes(true);
 			for (int i = 0; i < customAttributes.Length; i++)
 			{
@@ -464,6 +466,7 @@ namespace BloxEditor.Databinding
 				}
 				if (type == typeof(ExcludeFromBloxAttribute))
 				{
+                   
 					flag = true;
 					break;
 				}

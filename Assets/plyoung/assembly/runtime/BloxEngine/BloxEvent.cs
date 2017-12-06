@@ -61,7 +61,8 @@ namespace BloxEngine
 			}
 			else
 			{
-				this.Serialize();
+                Debug.Log("CopyTo", "Blox", Color.yellow);
+                this.Serialize();
 				if (this.data == null)
 				{
 					this.data = new BloxEventData();
@@ -231,7 +232,8 @@ namespace BloxEngine
 		{
 			if (!Application.isPlaying)
 			{
-				this._isDirty = true;
+                Debug.Log("_SetDirty", "BloxEvent", Color.cyan);
+                this._isDirty = true;
 			}
 		}
 
@@ -239,7 +241,8 @@ namespace BloxEngine
 		{
 			if (this._isDirty)
 			{
-				this._isDirty = false;
+                Debug.Log("Serialize", "BloxEvent", Color.cyan);
+                this._isDirty = false;
 				this.storedBlocksIdx = new List<int>();
 				List<BloxBlock> list = new List<BloxBlock>();
 				this.data = new BloxEventData();
@@ -325,7 +328,8 @@ namespace BloxEngine
 			this.blox = owningBlox;
 			if (this._isDirty)
 			{
-				this.Serialize();
+                Debug.Log("Deserialize", "BloxEvent", Color.yellow);
+                this.Serialize();
 			}
 			if (this.data != null)
 			{

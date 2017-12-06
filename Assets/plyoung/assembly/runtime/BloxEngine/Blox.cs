@@ -86,7 +86,8 @@ namespace BloxEngine
 
 		public void Serialize()
 		{
-			plyVariables obj = this.variables;
+            Debug.Log("Serialize", "Blox", Color.yellow);
+            plyVariables obj = this.variables;
 			if (obj != null)
 			{
 				obj.Serialize();
@@ -103,11 +104,13 @@ namespace BloxEngine
 
 		void ISerializationCallbackReceiver.OnAfterDeserialize()
 		{
-			this.variables.Deserialize(false);
+            Debug.Log("Blox OnAfterDeserialize", "Blox", Color.cyan);
+            this.variables.Deserialize(false);
 		}
 
 		void ISerializationCallbackReceiver.OnBeforeSerialize()
 		{
+            Debug.Log("Blox OnBeforeSerialize", "Blox", Color.cyan);
 			this.Serialize();
 		}
 	}

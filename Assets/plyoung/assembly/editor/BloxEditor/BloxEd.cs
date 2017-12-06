@@ -324,6 +324,7 @@ namespace BloxEditor
 
 		private IEnumerator EventDefsLoader()
 		{
+            
 			Assembly[] assemblies = AppDomain.CurrentDomain.GetAssemblies();
 			List<Type> foundEventHandlers = new List<Type>();
 			for (int j = 0; j < assemblies.Length; j++)
@@ -1345,7 +1346,8 @@ namespace BloxEditor
 
 		public void RestoreDefaultNamespaces()
 		{
-			bool flag = false;
+            Debug.Log("RestoreDefaultNamespaces", "BloxSetting", Color.magenta);
+            bool flag = false;
 			foreach (string defaultNamespace in BloxEd.defaultNamespaces)
 			{
 				bool flag2 = false;
