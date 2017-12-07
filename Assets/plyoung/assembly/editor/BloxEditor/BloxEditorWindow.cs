@@ -830,7 +830,7 @@ namespace BloxEditor
                 EditorGUILayout.BeginVertical(GUILayout.Width(this.panelWidth[0]));
                 GUILayout.Box(GUIContent.none, plyEdGUI.Styles.Toolbar, GUILayout.ExpandWidth(true));
                 EditorGUILayout.Space();
-                plyEdGUI.DrawSpinner(BloxEditorWindow.GC_LoadingEvents, true, true);
+                //plyEdGUI.DrawSpinner(BloxEditorWindow.GC_LoadingEvents, true, true);
                 EditorGUILayout.EndVertical();
                 this.doRepaint = true;
             }
@@ -842,7 +842,7 @@ namespace BloxEditor
                     this.eventIdx = -2;
                     this.currEvent.Clear();
                 }
-                //Debug.Log("BloxEditor.BloxEditorWindow.DoEventsList.else blox.events Length" + blox.events.Length, "BlockEditorWindows", Color.green);
+                Debug.Log("BloxEditor.BloxEditorWindow.DoEventsList.else blox.events Length" + blox.events.Length, "BlockEditorWindows", Color.green);
                 this.panelWidth[0] = Mathf.Clamp(this.panelWidth[0], 190f, (float)(base.position.width / 2.0));
                 int num = plyEdGUI.List<BloxEvent>(ref this.eventIdx, ref this.blox.events, ref this.scroll[0], this.evListOps, new GUILayoutOption[1]
                 {

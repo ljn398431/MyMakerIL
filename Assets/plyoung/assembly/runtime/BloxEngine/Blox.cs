@@ -110,7 +110,7 @@ namespace BloxEngine
 
 		void ISerializationCallbackReceiver.OnBeforeSerialize()
 		{
-            Debug.Log("Blox OnBeforeSerialize", "Blox", Color.cyan);
+            Debug.Log("Blox OnBeforeSerialize"+this.ident, "Blox", Color.cyan);
 			this.Serialize();
 		}
 	}
