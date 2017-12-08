@@ -16,6 +16,7 @@ namespace BloxEngine
 	{
 		protected override void InitBlock()
 		{
+            Debug.Log("InitBlock", "IFBLOCK", UnityEngine.Color.red);
 			if (base.paramBlocks[0] == null)
 			{
 				base.LogError("Condition required.", null);
@@ -24,7 +25,8 @@ namespace BloxEngine
 
 		protected override object RunBlock()
 		{
-			bool flag = false;
+            Debug.Log("RunBlock", "IFBLOCK", UnityEngine.Color.red);
+            bool flag = false;
 			try
 			{
 				flag = (bool)base.paramBlocks[0].Run();
