@@ -113,7 +113,10 @@ namespace BloxEditor
 				EditorGUILayout.EndHorizontal();
 			}
 		}
-
+        /// <summary>
+        /// Ìí¼ÓÊÂ¼þ
+        /// </summary>
+        /// <param name="item"></param>
 		private void OnTreeItemSelected(plyEdTreeItem<BloxEventDef> item)
 		{
 			if (item.data != null)

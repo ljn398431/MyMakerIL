@@ -29,6 +29,7 @@ namespace BloxEngine
 
 		protected override object RunBlock()
 		{
+            Debug.Log("run block", Color.red);
 			string arg = this.message;
 			if (base.paramBlocks != null)
 			{

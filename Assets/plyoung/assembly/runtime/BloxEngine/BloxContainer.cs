@@ -27,12 +27,12 @@ namespace BloxEngine
 
 		[SerializeField]
 		private List<BloxVariables> bloxVars = new List<BloxVariables>();
-
-		private Dictionary<string, List<BloxEvent>> customEvents;
-
-		private Dictionary<string, BloxVariables> bloxVarCache;
-
-		private Dictionary<string, SendMessageInfo> sendMessageCache = new Dictionary<string, SendMessageInfo>(0);
+        [SerializeField]
+        private Dictionary<string, List<BloxEvent>> customEvents;
+        [SerializeField]
+        private Dictionary<string, BloxVariables> bloxVarCache;
+        [SerializeField]
+        private Dictionary<string, SendMessageInfo> sendMessageCache = new Dictionary<string, SendMessageInfo>(0);
 
 		protected void Awake()
 		{

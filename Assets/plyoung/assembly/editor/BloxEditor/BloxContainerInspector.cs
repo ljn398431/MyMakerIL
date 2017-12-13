@@ -141,6 +141,7 @@ namespace BloxEditor
 
 		public override void OnInspectorGUI()
 		{
+            base.OnInspectorGUI();
 			this.Target = (BloxContainer)base.target;
 			EditorGUILayout.Space();
 			this.list.DoLayoutList();
