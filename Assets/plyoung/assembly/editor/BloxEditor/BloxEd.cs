@@ -496,7 +496,10 @@ namespace BloxEditor
 			this.blockDefs.Add(bloxBlockDef.ident, bloxBlockDef);
 			return bloxBlockDef;
 		}
-
+        /// <summary>
+        /// »ýÄ¾¼ÓÔØÆ÷
+        /// </summary>
+        /// <returns></returns>
 		private IEnumerator BlockDefsLoader()
 		{
 			List<Type> usedValueTypes = new List<Type>(20)
@@ -686,6 +689,7 @@ namespace BloxEditor
 			{
 				while (enumerator.MoveNext())
 				{
+                    Debug.Log("BlockDefsLoader", "BloxED", Color.magenta);
 					BloxBlockDef bloxBlockDef3 = BloxEd.CreateValueBlock(enumerator.Current);
 					if (bloxBlockDef3 != null && !this.blockDefs.ContainsKey(bloxBlockDef3.ident))
 					{
@@ -781,6 +785,7 @@ namespace BloxEditor
 			bloxBlockDef.blockType = BloxBlockType.Value;
 			bloxBlockDef.order = 0;
 			bloxBlockDef.returnType = t;
+            Debug.Log("CreateValueBlock"+t.ToString(), "BloxED", Color.magenta);
 			bloxBlockDef.returnName = BloxEd.PrettyTypeName(t, true);
 			bloxBlockDef.blockSystemType = typeof(BloxBlock);
 			bloxBlockDef.att = null;

@@ -498,6 +498,7 @@ namespace BloxEditor
                         Debug.Log("current after" + current, Color.blue);
                         if (this.canvasRect.Contains(current.mousePosition) && !BloxPropsPanel.Instance.propsRect.Contains(current.mousePosition))
                         {
+                            Debug.Log("MouseDown add block", "BloxEditorWindow", Color.magenta);
                             this.AddBlock();
                         }
                     }
@@ -542,6 +543,7 @@ namespace BloxEditor
                             current.Use();
                             if (this.dragDropBlock != null)
                             {
+                                Debug.Log("MouseUp add block", "BloxEditorWindow", Color.magenta);
                                 this.AddBlock();
                             }
                         }
@@ -630,6 +632,7 @@ namespace BloxEditor
                         DragAndDrop.AcceptDrag();
                         plyEdGUI.ClearFocus();
                         current.Use();
+                        Debug.Log("DragPerform add block", "BloxEditorWindow", Color.magenta);
                         this.AddBlock();
                         this.dragDrop = null;
                     }
@@ -652,7 +655,8 @@ namespace BloxEditor
                         else
                         {
                             plyVariablesEditor.DragDropData dragDropData = DragAndDrop.GetGenericData("plyVariable") as plyVariablesEditor.DragDropData;
-                            if (dragDropData != null && this.canvasRect.Contains(current.mousePosition) && !BloxPropsPanel.Instance.propsRect.Contains(current.mousePosition) && BloxEd.Instance.blockDefs.TryGetValue("Common/Variable", out this.dragDrop))
+                            if (dragDropData != null && this.canvasRect.Contains(current.mousePosition) && !BloxPropsPanel.Instance.propsRect.
+                                Contains(current.mousePosition) && BloxEd.Instance.blockDefs.TryGetValue("Common/Variable", out this.dragDrop))
                             {
                                 Variable_Block variable_Block = (Variable_Block)this.InstantiateBlock(this.dragDrop);
                                 this.dragDropBlock = new BloxBlockEd(variable_Block, null, null, null, -1, true);
@@ -842,7 +846,7 @@ namespace BloxEditor
                     this.eventIdx = -2;
                     this.currEvent.Clear();
                 }
-                Debug.Log("BloxEditor.BloxEditorWindow.DoEventsList.else blox.events Length" + blox.events.Length, "BlockEditorWindows", Color.green);
+                //Debug.Log("BloxEditor.BloxEditorWindow.DoEventsList.else blox.events Length" + blox.events.Length, "BlockEditorWindows", Color.green);
                 this.panelWidth[0] = Mathf.Clamp(this.panelWidth[0], 190f, (float)(base.position.width / 2.0));
                 int num = plyEdGUI.List<BloxEvent>(ref this.eventIdx, ref this.blox.events, ref this.scroll[0], this.evListOps, new GUILayoutOption[1]
                 {
@@ -1731,6 +1735,7 @@ namespace BloxEditor
 
         private void AddNewBlock()
         {
+            Debug.Log("AddNewBlock", "BloxEditorWindow", Color.magenta);
             BloxBlock bloxBlock = this.InstantiateBlock(this.dragDrop);
             BloxBlockEd bloxBlockEd = null;
             if (bloxBlock == null)
@@ -2239,6 +2244,7 @@ namespace BloxEditor
         {
             if (this.dragOut == DragOut.None || this.dragOut == DragOut.DontWorryAboutIt)
             {
+                Debug.Log("RestoreFromDragOut  null", "BloxEditorWindow", Color.magenta);
                 this.ClearDragDropBlock();
             }
             else
@@ -2280,6 +2286,7 @@ namespace BloxEditor
                     this.dragDropInsertFieldIdx = (int)(this.dragOut - 7);
                     this.dragDropInsertContext = this.dragOutBlockRef;
                 }
+                Debug.Log("RestoreFromDragOut not null", "BloxEditorWindow", Color.magenta);
                 this.AddBlock();
             }
         }
