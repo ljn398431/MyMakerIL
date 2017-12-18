@@ -227,6 +227,7 @@ namespace BloxEditor
 
 		public static Blox CreateNewBloxDef()
 		{
+            Debug.Log("CreateNewBloxDef", "BloxEd", Color.red);
 			plyEdUtil.CheckPath(BloxEdGlobal.DefsPath);
 			string text = plyEdUtil.GenerateUniqueFileGUID("_", BloxEdGlobal.DefsPath, ".asset");
 			Blox blox = plyEdUtil.LoadOrCreateAsset<Blox>(BloxEdGlobal.DefsPath + text + ".asset", false);
@@ -243,7 +244,8 @@ namespace BloxEditor
 
 		public static void DeleteBloxDef(Blox def)
 		{
-			int num = 0;
+            Debug.Log("DeleteBloxDef", "BloxEd", Color.red);
+            int num = 0;
 			while (num < BloxEd.BloxGlobalObj.bloxDefs.Count)
 			{
 				if (!(BloxEd.BloxGlobalObj.bloxDefs[num].ident == def.ident))
@@ -270,7 +272,8 @@ namespace BloxEditor
 
 		public static Blox GetBloxDef(string bloxIdent)
 		{
-			for (int i = 0; i < BloxEd.BloxGlobalObj.bloxDefs.Count; i++)
+            Debug.Log("GetBloxDef", "BloxEd", Color.red);
+            for (int i = 0; i < BloxEd.BloxGlobalObj.bloxDefs.Count; i++)
 			{
 				if (BloxEd.BloxGlobalObj.bloxDefs[i].ident == bloxIdent)
 				{
@@ -324,8 +327,8 @@ namespace BloxEditor
 
 		private IEnumerator EventDefsLoader()
 		{
-            
-			Assembly[] assemblies = AppDomain.CurrentDomain.GetAssemblies();
+            Debug.Log("EventDefsLoader", "BloxEd", Color.red);
+            Assembly[] assemblies = AppDomain.CurrentDomain.GetAssemblies();
 			List<Type> foundEventHandlers = new List<Type>();
 			for (int j = 0; j < assemblies.Length; j++)
 			{
@@ -399,7 +402,8 @@ namespace BloxEditor
 
 		public void LoadBlockDefs(bool forced)
 		{
-			if (!forced)
+            Debug.Log("LoadBlockDefs", "BloxEd", Color.red);
+            if (!forced)
 			{
 				if (this.blockDefs.Count != 0)
 					return;
@@ -419,7 +423,8 @@ namespace BloxEditor
 
 		public BloxBlockDef FindBlockDef(BloxBlock b)
 		{
-			if (b == null)
+            Debug.Log("FindBlockDef", "BloxEd", Color.red);
+            if (b == null)
 			{
 				return null;
 			}
@@ -449,7 +454,8 @@ namespace BloxEditor
 
 		public BloxBlockDef FindBlockDef(string ident)
 		{
-			BloxBlockDef result = null;
+            Debug.Log("FindBlockDef", "BloxEd", Color.red);
+            BloxBlockDef result = null;
 			if (this.blockDefs.TryGetValue(ident, out result))
 			{
 				return result;
@@ -459,7 +465,8 @@ namespace BloxEditor
 
 		public BloxBlockDef FindValueBlockDef(Type t)
 		{
-			if (t == null)
+            Debug.Log("FindValueBlockDef", "BloxEd", Color.red);
+            if (t == null)
 			{
 				return null;
 			}
@@ -474,12 +481,14 @@ namespace BloxEditor
 
 		private BloxBlockDef ForceLoadDefFor(BloxBlock b)
 		{
-			return this.ForceLoadDefFor(b.mi);
+            Debug.Log("ForceLoadDefFor", "BloxEd", Color.red);
+            return this.ForceLoadDefFor(b.mi);
 		}
 
 		private BloxBlockDef ForceLoadDefFor(BloxMemberInfo mi)
 		{
-			if (mi == null)
+            Debug.Log("ForceLoadDefFor BloxMemberInfo", "BloxEd", Color.red);
+            if (mi == null)
 			{
 				return null;
 			}
@@ -502,7 +511,8 @@ namespace BloxEditor
         /// <returns></returns>
 		private IEnumerator BlockDefsLoader()
 		{
-			List<Type> usedValueTypes = new List<Type>(20)
+            Debug.Log("BlockDefsLoader", "BloxEd", Color.red);
+            List<Type> usedValueTypes = new List<Type>(20)
 			{
 				typeof(bool),
 				typeof(int),
@@ -689,7 +699,8 @@ namespace BloxEditor
 			{
 				while (enumerator.MoveNext())
 				{
-                    Debug.Log("BlockDefsLoader", "BloxED", Color.magenta);
+                    //suifeng
+                    //Debug.Log("BlockDefsLoader", "BloxED", Color.magenta);
 					BloxBlockDef bloxBlockDef3 = BloxEd.CreateValueBlock(enumerator.Current);
 					if (bloxBlockDef3 != null && !this.blockDefs.ContainsKey(bloxBlockDef3.ident))
 					{
@@ -713,7 +724,8 @@ namespace BloxEditor
 
 		private BloxBlockDef CheckForSingleton(Type t)
 		{
-			if (t.IsValueType)
+            //Debug.Log("CheckForSingleton", "BloxEd", Color.red);
+            if (t.IsValueType)
 			{
 				return null;
 			}
@@ -758,7 +770,8 @@ namespace BloxEditor
 
 		private static void IncludeThisValueType(Type t, List<Type> usedValueTypes)
 		{
-			if (t != null && t != typeof(void) && !usedValueTypes.Contains(t))
+            //Debug.Log("IncludeThisValueType", "BloxEd", Color.red);
+            if (t != null && t != typeof(void) && !usedValueTypes.Contains(t))
 			{
 				Type type = t;
 				if (type.IsArray)
@@ -781,13 +794,14 @@ namespace BloxEditor
 
 		public static BloxBlockDef CreateValueBlock(Type t)
 		{
-			BloxBlockDef bloxBlockDef = new BloxBlockDef();
+            //Debug.Log("CreateValueBlock", "BloxEd", Color.red);
+            BloxBlockDef bloxBlockDef = new BloxBlockDef();
 			bloxBlockDef.blockType = BloxBlockType.Value;
 			bloxBlockDef.order = 0;
 			bloxBlockDef.returnType = t;
-            Debug.Log("CreateValueBlock"+t.ToString(), "BloxED", Color.magenta);
 			bloxBlockDef.returnName = BloxEd.PrettyTypeName(t, true);
-			bloxBlockDef.blockSystemType = typeof(BloxBlock);
+            Debug.Log("CreateValueBlock " + t.ToString() + "return name: " + bloxBlockDef.returnName, "BloxED", Color.magenta);
+            bloxBlockDef.blockSystemType = typeof(BloxBlock);
 			bloxBlockDef.att = null;
 			bloxBlockDef.ident = BloxEd.GetValueBlockIdent(t);
 			if (bloxBlockDef.ident == null)
@@ -799,7 +813,8 @@ namespace BloxEditor
 
 		public static BloxBlockDef CreateMemberBlock(BloxMemberInfo mi, List<Type> usedValueTypes)
 		{
-			BloxBlockDef singletonMember = null;
+            Debug.Log("CreateMemberBlock", "BloxEd", Color.red);
+            BloxBlockDef singletonMember = null;
 			if ((UnityEngine.Object)BloxEd._instance != (UnityEngine.Object)null)
 			{
 				BloxEd._instance.singletons.TryGetValue(mi.ReflectedType, out singletonMember);
@@ -809,7 +824,8 @@ namespace BloxEditor
 
 		public static BloxBlockDef CreateMemberBlock(BloxMemberInfo mi, List<Type> usedValueTypes, BloxBlockDef singletonMember)
 		{
-			string name = mi.Name;
+            //Debug.Log("CreateMemberBlock", "BloxEd", Color.red);
+            string name = mi.Name;
 			int num = 0;
 			ParameterInfo[] array = null;
 			BloxBlockType blockType = BloxBlockType.Action;
@@ -1141,7 +1157,8 @@ namespace BloxEditor
 
 		private static string GetValueBlockIdent(Type t)
 		{
-			if (t.IsArray)
+            //Debug.Log("GetValueBlockIdent", "BloxEd", Color.red);
+            if (t.IsArray)
 			{
 				Type elementType = t.GetElementType();
 				return "Values/Array/Array <" + BloxEd.PrettyTypeName(elementType, false) + ">";
@@ -1212,7 +1229,8 @@ namespace BloxEditor
 
 		public static List<Type> ScanTypes()
 		{
-			Assembly[] assemblies = AppDomain.CurrentDomain.GetAssemblies();
+            Debug.Log("ScanTypes", "BloxEd", Color.red);
+            Assembly[] assemblies = AppDomain.CurrentDomain.GetAssemblies();
 			List<Type> list = new List<Type>();
 			foreach (string @namespace in BloxEd.Instance.namespaces)
 			{
@@ -1270,7 +1288,8 @@ namespace BloxEditor
 
 		public static void UpdateLinkFile()
 		{
-			int num = EditorUtility.DisplayDialogComplex("Update Link File", "Should existing Link file be deleted before updating?\n\nA link file is needed if you enable stripping in a build.", "Yes", "No", "Cancel");
+            Debug.Log("UpdateLinkFile", "BloxEd", Color.red);
+            int num = EditorUtility.DisplayDialogComplex("Update Link File", "Should existing Link file be deleted before updating?\n\nA link file is needed if you enable stripping in a build.", "Yes", "No", "Cancel");
 			if (num != 2)
 			{
 				bool delOldFile = num == 0;

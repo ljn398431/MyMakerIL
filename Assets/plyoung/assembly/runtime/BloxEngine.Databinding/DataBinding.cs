@@ -24,6 +24,7 @@ namespace BloxEngine.Databinding
 
 		public DataBinding Copy()
 		{
+            Debug.Log("Copy", "DataBinding", Color.red);
 			DataBinding dataBinding = new DataBinding();
 			this.CopyTo(dataBinding);
 			return dataBinding;
@@ -48,7 +49,8 @@ namespace BloxEngine.Databinding
 
 		public void Initialize(Action onValueChangedCallback, Component owner)
 		{
-			if ((UnityEngine.Object)this.dataprovider != (UnityEngine.Object)null)
+            Debug.Log("Initialize", "DataBinding", Color.red);
+            if ((UnityEngine.Object)this.dataprovider != (UnityEngine.Object)null)
 			{
 				this.dataprovider.Initialize(owner);
 				this.Value = this.dataprovider.GetValue();
@@ -93,7 +95,8 @@ namespace BloxEngine.Databinding
 
 		public void Execute(object blackboardValue)
 		{
-			DataProvider obj = this.dataprovider;
+            Debug.Log("Execute", "DataBinding", Color.red);
+            DataProvider obj = this.dataprovider;
 			if ((object)obj != null)
 			{
 				obj.Execute(blackboardValue);

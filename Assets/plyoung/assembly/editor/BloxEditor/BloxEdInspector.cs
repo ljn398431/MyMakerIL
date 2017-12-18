@@ -7,6 +7,7 @@ namespace BloxEditor
 	{
 		public override void OnInspectorGUI()
 		{
+            base.OnInspectorGUI();
 			EditorGUILayout.HelpBox("Do not edit or move this asset", MessageType.None);
 		}
 	}

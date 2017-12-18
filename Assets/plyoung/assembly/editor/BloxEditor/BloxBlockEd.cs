@@ -1,6 +1,7 @@
 using BloxEngine;
 using System;
 using System.Reflection;
+using UnityEngine;
 
 namespace BloxEditor
 {
@@ -58,6 +59,7 @@ namespace BloxEditor
 
 		public BloxBlockEd(BloxBlock b, BloxBlockEd prev, BloxBlockEd parentBlock, BloxBlockEd owningBlock, int fieldIdx, bool checkNextToo = true)
 		{
+            Debug.Log("BloxBlockEd", "BloxBlockEd", Color.cyan);
 			this.b = b;
 			this.def = BloxEd.Instance.FindBlockDef(b);
 			this.prev = prev;
