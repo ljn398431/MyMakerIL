@@ -315,7 +315,13 @@ namespace BloxEditor
 				EditorGUILayout.Space();
 			}
 		}
-
+        /// <summary>
+        /// 可编辑 输入面板 判断类型并表现
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="value"></param>
+        /// <param name="block"></param>
+        /// <returns></returns>
 		private object Edit_Field(Type type, object value, BloxBlockEd block)
 		{
 			EditorGUIUtility.wideMode = true;

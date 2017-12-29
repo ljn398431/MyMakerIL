@@ -1074,6 +1074,7 @@ namespace BloxEditor
                 GUI.EndGroup();
                 GUI.color = Color.white;
             }
+            //doc 说明 入口
             BloxPropsPanel instance = BloxPropsPanel.Instance;
             Rect position = base.position;
             double x = position.width - (BloxEdGlobal.BlocksListDocked ? (this.panelWidth[1] + 1.0) : 0.0);
@@ -2176,6 +2177,8 @@ namespace BloxEditor
             source.CopyTo(bloxBlock);
             if (source.contextBlock != null)
             {
+
+                Debug.LogError("contextBlock " + source.contextBlock.ToString(), "Test");
                 bloxBlock.contextBlock = this.CopyBlock(source.contextBlock);
             }
             if (((source.paramBlocks != null) ? source.paramBlocks.Length : 0) != 0)

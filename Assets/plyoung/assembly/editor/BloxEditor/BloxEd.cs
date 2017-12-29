@@ -400,6 +400,7 @@ namespace BloxEditor
                     }
                 }
             }
+
             #endregion
 
             this.eventDefs.Sort((BloxEventDef a, BloxEventDef b) => a.CompareTo(b));
@@ -460,6 +461,7 @@ namespace BloxEditor
 
         public BloxBlockDef FindBlockDef(string ident)
         {
+
             Debug.Log("FindBlockDef", "BloxEd", Color.red);
             BloxBlockDef result = null;
             if (this.blockDefs.TryGetValue(ident, out result))
@@ -656,8 +658,6 @@ namespace BloxEditor
             #region
             List<Type> checkedForSingleton = new List<Type>();
             List<string> lines = plyEdUtil.ReadCompressedLines(plyEdUtil.ProjectFullPath + BloxEdGlobal.MiscPath + "blocks.bin");
-
-
             if (lines.Count > 0)
             {
                 yield return (object)null;
@@ -743,10 +743,12 @@ namespace BloxEditor
             }
             enumerator = default(List<Type>.Enumerator);
             this.BlockDefsLoading = false;
+            Debug.Log("singletons num " + singletons.Count, "Blox load", Color.red);
         }
 
         private BloxBlockDef CheckForSingleton(Type t)
         {
+
             //Debug.Log("CheckForSingleton", "BloxEd", Color.red);
             if (t.IsValueType)
             {
@@ -847,7 +849,7 @@ namespace BloxEditor
 
         public static BloxBlockDef CreateMemberBlock(BloxMemberInfo mi, List<Type> usedValueTypes, BloxBlockDef singletonMember)
         {
-            //Debug.Log("CreateMemberBlock", "BloxEd", Color.red);
+            //Debug.Log("CreateMemberBlock"+mi.Name, "BloxEd", Color.red);
             string name = mi.Name;
             int num = 0;
             ParameterInfo[] array = null;
