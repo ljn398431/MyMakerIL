@@ -55,7 +55,8 @@ namespace BloxEngine
 
 		public void CopyTo(BloxEvent ev)
 		{
-			if (Application.isPlaying)
+            Debug.Log("CopyTo", "BloxEvent", Color.yellow);
+            if (Application.isPlaying)
 			{
 				Debug.LogError("This can't be done at runtime");
 			}
@@ -85,7 +86,8 @@ namespace BloxEngine
 
 		public BloxEvent Init(BloxContainer container, Blox blox)
 		{
-			if (!this.active)
+            Debug.Log("Init", "BloxEvent", Color.yellow);
+            if (!this.active)
 			{
 				return null;
 			}
@@ -241,7 +243,7 @@ namespace BloxEngine
 		{
 			if (this._isDirty)
 			{
-                Debug.Log("Serialize", "BloxEvent", Color.cyan);
+                Debug.Log("Serialize", "BloxEvent", Color.yellow);
                 this._isDirty = false;
 				this.storedBlocksIdx = new List<int>();
 				List<BloxBlock> list = new List<BloxBlock>();
@@ -297,7 +299,8 @@ namespace BloxEngine
 
 		private void CollectBlockData(BloxBlock b, List<BloxBlock> savedBlocks, BloxEventData data)
 		{
-			BloxBlockData item = new BloxBlockData(b);
+            Debug.Log("CollectBlockData", "BloxEvent", Color.yellow);
+            BloxBlockData item = new BloxBlockData(b);
 			savedBlocks.Add(b);
 			data.blocks.Add(item);
 			if (b.contextBlock != null)
@@ -325,7 +328,8 @@ namespace BloxEngine
 
 		public void Deserialize(Blox owningBlox)
 		{
-			this.blox = owningBlox;
+            Debug.Log("Deserialize", "BloxEvent", Color.yellow);
+            this.blox = owningBlox;
 			if (this._isDirty)
 			{
                 Debug.Log("Deserialize", "BloxEvent", Color.yellow);

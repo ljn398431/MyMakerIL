@@ -31,7 +31,8 @@ namespace BloxEngine
 			this.bloxLoaded = false;
 			if (this.scriptDirty)
 			{
-				this.Deserialize();
+                Debug.Log("OnEnable", "BloxEditorWindow", Color.yellow);
+                this.Deserialize();
 			}
 			else
 			{
@@ -70,7 +71,8 @@ namespace BloxEngine
 
 		public void Deserialize()
 		{
-			this.bloxLoaded = true;
+            Debug.Log("Deserialize", "Blox", Color.yellow);
+            this.bloxLoaded = true;
 			plyVariables obj = this.variables;
 			if (obj != null)
 			{

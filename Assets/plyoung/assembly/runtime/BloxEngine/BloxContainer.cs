@@ -74,7 +74,8 @@ namespace BloxEngine
 		{
 			if (!b.bloxLoaded)
 			{
-				b.Deserialize();
+                Debug.Log("AttachEventHandlers", "BloxContainer", Color.yellow);
+                b.Deserialize();
 			}
 			Common_BloxEventHandler common_BloxEventHandler = null;
 			for (int i = 0; i < b.events.Length; i++)

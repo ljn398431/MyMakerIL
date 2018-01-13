@@ -183,7 +183,7 @@ namespace BloxEditor
 
         public static void LoadBloxGlobal()
         {
-            if (!((UnityEngine.Object)BloxEd._bloxGlobalPrefab != (UnityEngine.Object)null))
+            if (BloxEd._bloxGlobalPrefab == null)
             {
                 plyEdUtil.CheckPath(BloxEdGlobal.DataRoot);
                 BloxEd._bloxGlobalPrefab = plyEdUtil.LoadOrCreatePrefab<BloxGlobal>("BloxGlobal", BloxEdGlobal.BloxGlobalFabPath);
@@ -205,10 +205,20 @@ namespace BloxEditor
                     string[] files = Directory.GetFiles(plyEdUtil.ProjectFullPath + BloxEdGlobal.DefsPath);
                     for (int i = 0; i < files.Length; i++)
                     {
-                        Debug.Log("Load block asset" + files[i], "BloxEd", Color.red);
+                        Debug.Log("Load block asset" + plyEdUtil.ProjectRelativePath(files[i]), "BloxEd", Color.red);
+
                         Blox blox = plyEdUtil.LoadAsset<Blox>(plyEdUtil.ProjectRelativePath(files[i]));
+                        if (blox != null)
+                        {
+                            Debug.Log(blox.ident, "BloxEd", Color.red);
+                            if (blox.events.Length > 0)
+                            {
+                                Debug.Log(blox.events[0].ident, "BloxEd", Color.red);
+                            }
+                        }
                         if ((UnityEngine.Object)blox != (UnityEngine.Object)null && (UnityEngine.Object)BloxEd._bloxGlobalObj.FindBloxDef(blox.ident) == (UnityEngine.Object)null)
                         {
+                            Debug.Log("add to _bloxGlobalObj.bloxDefs", "BloxEd", Color.red);
                             BloxEd._bloxGlobalObj.bloxDefs.Add(blox);
                             flag = true;
                         }

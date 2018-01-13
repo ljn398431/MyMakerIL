@@ -260,6 +260,7 @@ namespace BloxEditor
             this.blox = bloxDef;
             if (!((UnityEngine.Object)this.blox == (UnityEngine.Object)null))
             {
+                Debug.Log("Deserialize", "BloxEditorWindow", Color.yellow);
                 EditorPrefs.SetString("Blox.LastLoadedBlox." + plyEdUtil.ProjectEdPrefsKey, this.blox.ident);
                 this.blox.Deserialize();
                 BloxListWindow instance = BloxListWindow.Instance;
@@ -1082,7 +1083,10 @@ namespace BloxEditor
             instance.DoGUI(this, new Vector2((float)x, position.height));
             plyEdGUI.DrawInnerShadow(this.canvasRect);
         }
-
+        /// <summary>
+        /// 整个事件绘画
+        /// </summary>
+        /// <param name="id"></param>
         private void EventWindow(int id)
         {
             Event current = Event.current;
@@ -1198,6 +1202,7 @@ namespace BloxEditor
                 flag = false;
                 rect = this.DrawErrorBlock(ev, bdi);
             }
+            #region 画布内  积木操作
             if (ev.type == EventType.MouseDown && !this.IsDragging() && !flag && (ev.button == 0 || ev.button == 1) && rect.Contains(ev.mousePosition) && !BloxPropsPanel.Instance.propsRect.Contains(ev.mousePosition + this.blockAreaV2))
             {
                 plyEdGUI.ClearFocus();
@@ -1212,6 +1217,7 @@ namespace BloxEditor
                 this.blockDragTimer.Reset();
                 this.blockDragTimer.Start();
             }
+            #endregion
             if (bdi.b.blockType == BloxBlockType.Container)
             {
                 Rect rect2 = EditorGUILayout.BeginVertical(bdi.def.style[2]);
@@ -1263,7 +1269,7 @@ namespace BloxEditor
 
         private Rect DrawValueBlock(Event ev, BloxBlockEd bdi)
         {
-            Rect rect;
+            Rect rect = new Rect(0,0,0,0);
             if (bdi.def.overrideRenderFields == 1 || (bdi.def.overrideRenderFields == 0 && bdi.def.paramDefs.Length == 0) || (bdi.def.mi != null && (bdi.def.mi.MemberType == MemberTypes.Field || bdi.def.mi.MemberType == MemberTypes.Property)))
             {
                 rect = EditorGUILayout.BeginHorizontal(BloxEdGUI.Styles.Value[0]);
