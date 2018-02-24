@@ -234,7 +234,7 @@ namespace BloxEngine
 		{
 			if (!Application.isPlaying)
 			{
-                Debug.Log("_SetDirty", "BloxEvent", Color.cyan);
+                //Debug.Log("_SetDirty", "BloxEvent", Color.cyan);
                 this._isDirty = true;
 			}
 		}
@@ -243,7 +243,7 @@ namespace BloxEngine
 		{
 			if (this._isDirty)
 			{
-                Debug.Log("Serialize", "BloxEvent", Color.yellow);
+                //Debug.Log("Serialize", "BloxEvent", Color.yellow);
                 this._isDirty = false;
 				this.storedBlocksIdx = new List<int>();
 				List<BloxBlock> list = new List<BloxBlock>();
@@ -299,7 +299,7 @@ namespace BloxEngine
 
 		private void CollectBlockData(BloxBlock b, List<BloxBlock> savedBlocks, BloxEventData data)
 		{
-            Debug.Log("CollectBlockData", "BloxEvent", Color.yellow);
+            //Debug.Log("CollectBlockData", "BloxEvent", Color.yellow);
             BloxBlockData item = new BloxBlockData(b);
 			savedBlocks.Add(b);
 			data.blocks.Add(item);
@@ -328,7 +328,7 @@ namespace BloxEngine
 
 		public void Deserialize(Blox owningBlox)
 		{
-            Debug.Log("Deserialize", "BloxEvent", Color.yellow);
+            //Debug.Log("Deserialize", "BloxEvent", Color.yellow);
             this.blox = owningBlox;
 			if (this._isDirty)
 			{

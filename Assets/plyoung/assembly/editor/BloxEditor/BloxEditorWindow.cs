@@ -147,6 +147,7 @@ namespace BloxEditor
 
         private GUIContent GC_BlockLabel = new GUIContent();
 
+
         private GUIContent GC_DragDropLabel = new GUIContent();
 
         public static void Show_BloxEditorWindow(Blox bloxDef)
@@ -276,7 +277,7 @@ namespace BloxEditor
         {
             if (blocksChanged)
             {
-                Debug.Log("SaveBlox", "BloxEditorWindow", Color.cyan);
+                //Debug.Log("SaveBlox", "BloxEditorWindow", Color.cyan);
                 BloxEvent ev = this.currEvent.ev;
                 if (ev != null)
                 {
@@ -484,15 +485,18 @@ namespace BloxEditor
                     }
                     break;
                 case EventType.MouseDown:
+                    Debug.Log("MouseDown", "Event", Color.magenta);
                     if (current.button == 1 && this.dragDropBlock != null)
                     {
+                        Debug.Log("MouseDown current.button == 1 && this.dragDropBlock != null", "btn", Color.green);
                         this.RestoreFromDragOut();
                         this.ClearDragDropBlock();
                         current.Use();
-                        
+
                     }
                     else if (current.button == 0 && this.dragDropBlock != null)
                     {
+                        Debug.Log("MouseDown current.button == 0 && this.dragDropBlock != null", "btn", Color.green);
                         plyEdGUI.ClearFocus();
                         Debug.Log("current" + current, Color.blue);
                         current.Use();
@@ -505,6 +509,7 @@ namespace BloxEditor
                     }
                     else
                     {
+                        Debug.Log("MouseDown else", "btn", Color.green);
                         if ((current.button == 1 || (current.button == 0 && current.modifiers == EventModifiers.Control)) && this.canvasRect.Contains(current.mousePosition) && !BloxPropsPanel.Instance.propsRect.Contains(current.mousePosition))
                         {
                             this.mustShowContextMenu = true;
@@ -517,7 +522,7 @@ namespace BloxEditor
                                 this.draggingSplitter = 0;
                                 plyEdGUI.ClearFocus();
                                 current.Use();
-                                
+
                             }
                             else if (BloxEdGlobal.BlocksListDocked && this.splitterRect[1].Contains(current.mousePosition))
                             {
@@ -537,10 +542,12 @@ namespace BloxEditor
                     }
                     break;
                 case EventType.MouseUp:
+                    Debug.Log("MouseUp", "Event", Color.magenta);
                     if (current.button == 0)
                     {
                         if (this.dragOut != 0)
                         {
+                            Debug.Log("MouseUp dragOut != 0", "btn", Color.green);
                             current.Use();
                             if (this.dragDropBlock != null)
                             {
@@ -557,6 +564,7 @@ namespace BloxEditor
                         }
                         else if (this.draggingSplitter >= 0)
                         {
+                            Debug.Log("MouseUp draggingSplitter >= 0", "btn", Color.green);
                             EditorPrefs.SetFloat("Blox.panelWidth." + this.draggingSplitter, this.panelWidth[this.draggingSplitter]);
                             this.draggingSplitter = -1;
                             current.Use();
@@ -565,6 +573,7 @@ namespace BloxEditor
                     }
                     break;
                 case EventType.MouseDrag:
+                    Debug.Log("MouseDrag", "Event", Color.magenta);
                     if (current.button == 0)
                     {
                         if (this.blockDragStartDetected)
@@ -622,10 +631,12 @@ namespace BloxEditor
                     }
                     break;
                 case EventType.DragExited:
+                    Debug.Log("DragExited", "Event", Color.magenta);
                     this.ClearDragDropBlock();
                     current.Use();
                     break;
                 case EventType.DragPerform:
+                    Debug.Log("DragPerform", "Event", Color.magenta);
                     if (this.dragDrop != null)
                     {
                         this.dragOut = DragOut.None;
@@ -639,6 +650,7 @@ namespace BloxEditor
                     }
                     break;
                 case EventType.DragUpdated:
+                    Debug.Log("DragUpdated", "Event", Color.magenta);
                     if (this.currEvent.ev != null && !this.currEvent.Loading)
                     {
                         plyEdTreeItem<BloxBlockDef> plyEdTreeItem = DragAndDrop.GetGenericData("plyEdTreeView:BloxBlockDef") as plyEdTreeItem<BloxBlockDef>;
@@ -1269,7 +1281,7 @@ namespace BloxEditor
 
         private Rect DrawValueBlock(Event ev, BloxBlockEd bdi)
         {
-            Rect rect = new Rect(0,0,0,0);
+            Rect rect = new Rect(0, 0, 0, 0);
             if (bdi.def.overrideRenderFields == 1 || (bdi.def.overrideRenderFields == 0 && bdi.def.paramDefs.Length == 0) || (bdi.def.mi != null && (bdi.def.mi.MemberType == MemberTypes.Field || bdi.def.mi.MemberType == MemberTypes.Property)))
             {
                 rect = EditorGUILayout.BeginHorizontal(BloxEdGUI.Styles.Value[0]);
@@ -1529,7 +1541,13 @@ namespace BloxEditor
             }
             return result;
         }
-
+        /// <summary>
+        /// suifeng ºÏ≤ÈÕœ∂Ø≤Â»Î
+        /// </summary>
+        /// <param name="ev"></param>
+        /// <param name="r"></param>
+        /// <param name="b"></param>
+        /// <param name="toTail"></param>
         private void CheckDragDropInsert(Event ev, Rect r, BloxBlockEd b, bool toTail)
         {
             if (this.dragDrop != null)
@@ -1725,8 +1743,10 @@ namespace BloxEditor
         {
             if (this.currEvent.ev != null)
             {
+                
                 if (this.dragDropBlock != null)
                 {
+                    Debug.Log("AddBlock " + dragDropBlock, "AddBlock", Color.magenta);
                     this.AddCopiedBlock();
                 }
                 else
@@ -1754,8 +1774,10 @@ namespace BloxEditor
                 Undo.RegisterCompleteObjectUndo(this.blox, "Add Block");
                 if (this.dragDropInsertTop)
                 {
+
                     if (this.dragDropInsertContext == null)
                     {
+                        Debug.Log("AddNewBlock dragDropInsertTop dragDropInsertContext == null", "BloxEditorWindow", Color.yellow);
                         BloxBlockEd firstBlock = this.currEvent.firstBlock;
                         bloxBlockEd = (this.currEvent.firstBlock = new BloxBlockEd(bloxBlock, null, null, null, -1, true));
                         this.currEvent.firstBlock.next = firstBlock;
@@ -1768,6 +1790,7 @@ namespace BloxEditor
                     }
                     else
                     {
+                        Debug.Log("dragDropInsertTop true dragDropInsertContext!=null", "BloxEditorWindow", Color.yellow);
                         BloxBlockEd firstChild = this.dragDropInsertContext.firstChild;
                         bloxBlockEd = (this.dragDropInsertContext.firstChild = new BloxBlockEd(bloxBlock, null, (firstChild != null) ? firstChild.parentBlock : null, null, -1, true));
                         this.dragDropInsertContext.firstChild.next = firstChild;
@@ -1781,8 +1804,10 @@ namespace BloxEditor
                 }
                 else if (this.dragDropInsertContext != null)
                 {
+
                     if (this.dragDropInsertFieldIdx >= 0)
                     {
+                        Debug.Log("AddNewBlock dragDropInsertFieldIdx >= 0", "BloxEditorWindow", Color.yellow);
                         if (this.dragDropInsertFieldIdx == 9999)
                         {
                             bloxBlockEd = (this.dragDropInsertContext.contextBlock = new BloxBlockEd(bloxBlock, null, null, this.dragDropInsertContext, -1, true));
@@ -1796,6 +1821,7 @@ namespace BloxEditor
                     }
                     else
                     {
+                        Debug.Log("AddNewBlock dragDropInsertFieldIdx < 0", "BloxEditorWindow", Color.yellow);
                         BloxBlockEd next = this.dragDropInsertContext.next;
                         bloxBlockEd = (this.dragDropInsertContext.next = new BloxBlockEd(bloxBlock, this.dragDropInsertContext, (next != null) ? next.parentBlock : null, null, -1, true));
                         this.dragDropInsertContext.next.next = next;
@@ -1809,6 +1835,7 @@ namespace BloxEditor
                 }
                 else
                 {
+                    Debug.Log("AddNewBlock else", "BloxEditorWindow", Color.yellow);
                     bloxBlock._ed_viewOffs = Event.current.mousePosition - new Vector2(12f, 3f) - (this.currEvent.ev._ed_viewOffs + new Vector2(this.canvasRect.x, this.canvasRect.y));
                     this.currEvent.ev.unlinkedBlocks.Add(bloxBlock);
                     this.currEvent.unlinkedBlocks.Add(bloxBlockEd = new BloxBlockEd(bloxBlock, null, null, null, -1, true));
@@ -1823,12 +1850,14 @@ namespace BloxEditor
 
         private void AddCopiedBlock()
         {
+           
             BloxBlockEd bloxBlockEd = this.CopyWithLinkedBlocks(this.dragDropBlock);
             Undo.RegisterCompleteObjectUndo(this.blox, "Add Block");
             if (this.dragDropInsertTop)
             {
                 if (this.dragDropInsertContext == null)
                 {
+                Debug.Log(" dragDropInsertTop true dragDropInsertContext null", "AddCopiedBlock", Color.magenta);
                     BloxBlockEd firstBlock = this.currEvent.firstBlock;
                     this.currEvent.firstBlock = bloxBlockEd;
                     this.currEvent.ev.firstBlock = bloxBlockEd.b;
@@ -1842,6 +1871,7 @@ namespace BloxEditor
                 }
                 else
                 {
+                    Debug.Log(" dragDropInsertTop true dragDropInsertContext not null", "AddCopiedBlock", Color.magenta);
                     BloxBlockEd firstChild = this.dragDropInsertContext.firstChild;
                     this.dragDropInsertContext.firstChild = bloxBlockEd;
                     this.dragDropInsertContext.b.firstChild = bloxBlockEd.b;
@@ -1859,6 +1889,7 @@ namespace BloxEditor
             {
                 if (this.dragDropInsertFieldIdx >= 0)
                 {
+                Debug.Log(" dragDropInsertTop false dragDropInsertContext not null dragDropInsertFieldIdx >= 0 ", "AddCopiedBlock", Color.magenta);
                     if (this.dragDropInsertFieldIdx == 9999)
                     {
                         this.dragDropInsertContext.contextBlock = bloxBlockEd;
@@ -1876,6 +1907,7 @@ namespace BloxEditor
                 }
                 else
                 {
+                    Debug.Log(" dragDropInsertTop false dragDropInsertContext not null dragDropInsertFieldIdx < 0 ", "AddCopiedBlock", Color.magenta);
                     BloxBlockEd next = this.dragDropInsertContext.next;
                     this.dragDropInsertContext.next = bloxBlockEd;
                     this.dragDropInsertContext.b.next = bloxBlockEd.b;
@@ -1892,6 +1924,7 @@ namespace BloxEditor
             }
             else
             {
+                Debug.Log(" dragDropInsertTop false dragDropInsertContext is null ", "AddCopiedBlock", Color.magenta);
                 bloxBlockEd.b._ed_viewOffs = Event.current.mousePosition - new Vector2(12f, 3f) - (this.currEvent.ev._ed_viewOffs + new Vector2(this.canvasRect.x, this.canvasRect.y));
                 this.currEvent.ev.unlinkedBlocks.Add(bloxBlockEd.b);
                 this.currEvent.unlinkedBlocks.Add(bloxBlockEd);
@@ -2006,6 +2039,7 @@ namespace BloxEditor
                 Undo.RegisterCompleteObjectUndo(this.blox, "Remove Block");
                 if (this.currBlock.owningBlock != null)
                 {
+                    Debug.Log("currBlock.owningBlock != null"+ currBlock.owningBlock.b.ident, "DeleteSelectedBlock", Color.green);
                     if (this.currBlock.fieldIdx >= 0)
                     {
                         if (this.currBlock.owningBlock.paramBlocks != null && this.currBlock.fieldIdx < this.currBlock.owningBlock.paramBlocks.Length)

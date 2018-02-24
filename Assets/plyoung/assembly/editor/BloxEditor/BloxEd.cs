@@ -440,7 +440,7 @@ namespace BloxEditor
 
         public BloxBlockDef FindBlockDef(BloxBlock b)
         {
-            Debug.Log("FindBlockDef", "BloxEd", Color.red);
+            //Debug.Log("FindBlockDef", "BloxEd", Color.red);
             if (b == null)
             {
                 return null;

@@ -71,7 +71,7 @@ namespace BloxEngine
 
 		public void Deserialize()
 		{
-            Debug.Log("Deserialize", "Blox", Color.yellow);
+            //Debug.Log("Deserialize", "Blox", Color.yellow);
             this.bloxLoaded = true;
 			plyVariables obj = this.variables;
 			if (obj != null)
@@ -88,7 +88,7 @@ namespace BloxEngine
 
 		public void Serialize()
 		{
-            Debug.Log("Serialize", "Blox", Color.yellow);
+            //Debug.Log("Serialize", "Blox", Color.yellow);
             plyVariables obj = this.variables;
 			if (obj != null)
 			{

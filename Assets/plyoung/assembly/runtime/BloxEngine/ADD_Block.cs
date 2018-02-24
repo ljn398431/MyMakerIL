@@ -12,7 +12,8 @@ namespace BloxEngine
 		typeof(object),
 		typeof(object),
 		null
-	})]
+	})
+        ]
 	public class ADD_Block : BloxBlock
 	{
 		protected override object RunBlock()
